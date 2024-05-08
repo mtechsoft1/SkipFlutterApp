@@ -7,7 +7,6 @@ import 'package:task_rabbit/responsive/mobile_body.dart';
 import 'package:task_rabbit/responsive/responsive_layout.dart';
 import 'package:task_rabbit/screens/home_screen.dart';
 import 'package:task_rabbit/screens/try.dart';
-//import 'package:task_rabbit/screens/home_screen.dart';
 
 class New extends StatefulWidget {
   const New({super.key});
@@ -26,11 +25,11 @@ class _NewState extends State<New> {
   @override
   Widget build(BuildContext context) {
     // LocationHelper.getLocation(context);
-    // return Scaffold(
-    //     body: ResponsiveLayout(
-    //         mobile_body: MobileBody(),
-    //         desktop_body: DesktopBody()),
-    //         );
-    return Home();
+    return Scaffold(
+        body: ResponsiveLayout(
+            mobile_body: MobileBody(),
+            desktop_body: DesktopBody()),
+            );
+    return Try();
   }
 }
