@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
-class UserLocation extends StatefulWidget {
+class LocationService extends StatefulWidget {
+  const LocationService({super.key});
+
   @override
-  _UserLocationState createState() => _UserLocationState();
+  State<LocationService> createState() => _LocationServiceState();
 }
 
-class _UserLocationState extends State<UserLocation> {
+class _LocationServiceState extends State<LocationService> {
   Position? _currentPosition;
 
   @override
@@ -64,18 +66,12 @@ class _UserLocationState extends State<UserLocation> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Task Rabbit'),
-        ),
-        body: Center(
-          child: _currentPosition != null
-              ? Text(
-                  'Latitude: ${_currentPosition?.latitude}, Longitude: ${_currentPosition?.longitude}')
-              : CircularProgressIndicator(),
-        ),
+    return Scaffold(
+      body: Center(
+        child: _currentPosition != null
+            ? Text(
+                'Latitude: ${_currentPosition?.latitude}, Longitude: ${_currentPosition?.longitude}')
+            : CircularProgressIndicator(),
       ),
     );
   }
