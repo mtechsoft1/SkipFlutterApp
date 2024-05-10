@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/screens/home_screen.dart';
+//import 'package:task_rabbit/screens/home_screen.dart';
 import 'package:task_rabbit/location_service/location_service.dart';
 import 'package:task_rabbit/screens/new.dart';
 //import 'package:task_rabbit/screens/screen.dart';
@@ -17,12 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
       title: 'Task Rabbit',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      //   useMaterial3: true,
+      // ),
       home: New(),
       //home: HomeScreen(),
       //home: Screen(),
