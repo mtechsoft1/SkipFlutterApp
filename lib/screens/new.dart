@@ -5,6 +5,7 @@ import 'package:task_rabbit/location_service/location_helper.dart';
 import 'package:task_rabbit/responsive/desktop_body.dart';
 import 'package:task_rabbit/responsive/mobile_body.dart';
 import 'package:task_rabbit/responsive/responsive_layout.dart';
+import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
 import 'package:task_rabbit/screens/home_screen.dart';
 
 class New extends StatefulWidget {
@@ -30,5 +31,6 @@ class _NewState extends State<New> {
     //     desktop_body: DesktopBody()),
     //     );
     return HomeScreen();
+    //return HiringTaskerScreen();
   }
 }

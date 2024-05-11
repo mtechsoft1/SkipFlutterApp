@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget BottomNavBar(int index, String iconPath) {
+Widget BottomNavBarItem(int index, String iconPath) {
   // double isSelected = true;
 
   return GestureDetector(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:task_rabbit/screens/home_screen.dart';
+
 import 'package:task_rabbit/location_service/location_service.dart';
 import 'package:task_rabbit/screens/new.dart';
-//import 'package:task_rabbit/screens/screen.dart';
+
 import 'package:task_rabbit/screens/splash_screen.dart';
 import 'package:geolocator/geolocator.dart';
 
