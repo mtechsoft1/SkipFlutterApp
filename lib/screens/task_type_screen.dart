@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/task_type.dart';
+import 'package:task_rabbit/screens/task_type_screen.dart';
+import 'package:task_rabbit/screens/tasker_form_screen_one.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/items_widget.dart';
 import 'package:task_rabbit/widgets/radio_list_widget.dart';
@@ -83,13 +84,13 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                       height: DeviceDimensions.responsiveSize(
                                               context) *
                                           0.09, // Adjust size as needed
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
 
                                         color: Color.fromARGB(255, 92, 35,
                                             105), // Change color as needed
                                       ),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           '1',
                                           style: TextStyle(
@@ -111,7 +112,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                       height: DeviceDimensions.responsiveSize(
                                               context) *
                                           0.09, // Adjust size as needed
-                                      child: CircularProgressIndicator(
+                                      child: const CircularProgressIndicator(
                                         strokeWidth:
                                             2, // Adjust thickness of the progress indicator
                                         valueColor:
@@ -120,7 +121,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                         backgroundColor: Colors
                                             .transparent, // Make progress indicator background transparent
                                         value:
-                                            0.5, // Set progress value (0.0 to 1.0)
+                                            0.3, // Set progress value (0.0 to 1.0)
                                       ),
                                     ),
                                   ],
@@ -131,14 +132,14 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                   alignment: Alignment.centerRight,
                                   width: DeviceDimensions.screenWidth(context) *
                                       0.45, // or specify a specific width
-                                  color: Color.fromARGB(255, 92, 35, 105),
+                                  color: const Color.fromARGB(255, 92, 35, 105),
                                 ),
                               ],
                             ),
                             Align(
                               alignment: Alignment.centerRight,
                               child: Padding(
-                                padding: EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   //crossAxisAlignment: CrossAxisAlignment.end,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -147,7 +148,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                         width: DeviceDimensions.screenWidth(
                                                 context) *
                                             0.3),
-                                    Text('Describe Task')
+                                    const Text('Describe Task')
                                   ],
                                 ),
                               ),
@@ -169,7 +170,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                 ),
                                 Flexible(
                                   child: Padding(
-                                    padding: EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       'Tell Us About Your Task. We Use These Details To Show Taskers In Your Area Who Fit Your Needs.',
                                       style: TextStyle(
@@ -206,7 +207,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                       Container(
                         height: DeviceDimensions.screenHeight(context) * 0.2,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 239, 233, 240),
+                          color: const Color.fromARGB(255, 239, 233, 240),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -238,12 +239,12 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                               child: Container(
                                 width:
                                     DeviceDimensions.screenWidth(context) * 0.8,
-                                padding: EdgeInsets.symmetric(
+                                padding: const EdgeInsets.symmetric(
                                     horizontal: 20), // Adjust padding as needed
                                 child: Row(
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                    const Padding(
+                                      padding: EdgeInsets.all(8.0),
                                       child: Icon(Icons.location_on_outlined),
                                     ),
                                     Flexible(
@@ -269,7 +270,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                               child: Container(
                                   width: DeviceDimensions.screenWidth(context) *
                                       0.8,
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal:
                                           20), // Adjust padding as needed
                                   child: Row(
@@ -292,7 +293,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                                 DeviceDimensions.responsiveSize(
                                                         context) *
                                                     0.03,
-                                            color: Color.fromARGB(
+                                            color: const Color.fromARGB(
                                                 255, 92, 35, 105),
                                           ),
                                           softWrap: true,
@@ -314,7 +315,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                   //height: DeviceDimensions.screenHeight(context) * 0.09,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 239, 233, 240),
+                    color: const Color.fromARGB(255, 239, 233, 240),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
@@ -345,7 +346,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                             child: Container(
                               width:
                                   DeviceDimensions.screenWidth(context) * 0.8,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(
                                     color: Colors
@@ -483,7 +484,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                   //height: DeviceDimensions.screenHeight(context) * 0.09,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 239, 233, 240),
+                    color: const Color.fromARGB(255, 239, 233, 240),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
@@ -512,7 +513,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 16.0),
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(
                                     color: Colors
@@ -540,8 +541,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text('Small-Est. 1 Hr'),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text('Small-Est. 1 Hr'),
                               value: 'Small-Est. 1 Hr',
                               groupValue: selectedTimeOption,
                               onChanged: (value) {
@@ -554,8 +556,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text('Medium-Est. 2-3 Hrs'),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text('Medium-Est. 2-3 Hrs'),
                               value: 'Medium-Est. 2-3 Hrs',
                               groupValue: selectedTimeOption,
                               onChanged: (value) {
@@ -568,8 +571,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text('Large-Est. 4+ Hrs'),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text('Large-Est. 4+ Hrs'),
                               value: 'Large-Est. 4+ Hrs',
                               groupValue: selectedTimeOption,
                               onChanged: (value) {
@@ -582,8 +586,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text("Don't Know"),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text("Don't Know"),
                               value: "Don't Know",
                               groupValue: selectedTimeOption,
                               onChanged: (value) {
@@ -601,7 +606,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 16.0),
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 border: Border(
                                   bottom: BorderSide(
                                     color: Colors
@@ -629,8 +634,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text('Not Needed for Task'),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text('Not Needed for Task'),
                               value: 'Not Needed For Task',
                               groupValue: selectedVehicleOption,
                               onChanged: (value) {
@@ -643,8 +649,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text('Task Needs a Car'),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text('Task Needs a Car'),
                               value: 'Task Needs a Car',
                               groupValue: selectedVehicleOption,
                               onChanged: (value) {
@@ -657,8 +664,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 1.0),
                             child: RadioListTile(
-                              activeColor: Color.fromARGB(255, 92, 35, 105),
-                              title: Text('Task Needs a Truck'),
+                              activeColor:
+                                  const Color.fromARGB(255, 92, 35, 105),
+                              title: const Text('Task Needs a Truck'),
                               value: 'Task Needs a Truck',
                               groupValue: selectedVehicleOption,
                               onChanged: (value) {
@@ -680,7 +688,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                   //height: DeviceDimensions.screenHeight(context) * 0.09,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 239, 233, 240),
+                    color: const Color.fromARGB(255, 239, 233, 240),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
@@ -731,7 +739,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                               decoration: InputDecoration(
                                   hintText:
                                       'Type the summary of work you need from the tasker please provide the size, equipment /tools etc',
-                                  border: OutlineInputBorder(),
+                                  border: const OutlineInputBorder(),
                                   hintStyle: TextStyle(
                                     fontSize: DeviceDimensions.responsiveSize(
                                             context) *
@@ -746,19 +754,23 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                             width: DeviceDimensions.screenWidth(context) * 0.4,
                             child: ElevatedButton(
                               onPressed: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //       builder: (context) => TaskTypeScreen()),
-                                // );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          TaskerFormOneScreen()),
+                                );
                                 print('press');
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(255, 92, 35,
+                                backgroundColor: const Color.fromARGB(
+                                    255,
+                                    92,
+                                    35,
                                     105), // Set the background color of the button
                                 // Set the text color
                               ),
-                              child: Text(
+                              child: const Text(
                                 'Continue',
                                 style: TextStyle(color: Colors.white),
                               ),

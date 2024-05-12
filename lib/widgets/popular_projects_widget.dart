@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class PopularProjectsWidget extends StatelessWidget {
   final String imagePath;
@@ -8,11 +6,10 @@ class PopularProjectsWidget extends StatelessWidget {
   final String button_text;
 
   const PopularProjectsWidget(
-      {Key? key,
+      {super.key,
       required this.imagePath,
       required this.text,
-      required this.button_text})
-      : super(key: key);
+      required this.button_text});
 
   @override
   Widget build(BuildContext context) {

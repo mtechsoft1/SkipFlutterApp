@@ -5,9 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
 import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
 
-import 'package:task_rabbit/theme_toggle.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
-import 'package:task_rabbit/widgets/bottom_nav_bar_items.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
 

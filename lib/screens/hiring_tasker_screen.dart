@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/task_type.dart';
+import 'package:task_rabbit/screens/task_type_screen.dart';
 
 class HiringTaskerScreen extends StatefulWidget {
   const HiringTaskerScreen({super.key});
@@ -69,12 +69,12 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                       height: DeviceDimensions.responsiveSize(
                                               context) *
                                           0.09, // Adjust size as needed
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Color.fromARGB(255, 92, 35,
                                             105), // Change color as needed
                                       ),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           '1',
                                           style: TextStyle(
@@ -96,7 +96,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                       height: DeviceDimensions.responsiveSize(
                                               context) *
                                           0.09, // Adjust size as needed
-                                      child: CircularProgressIndicator(
+                                      child: const CircularProgressIndicator(
                                         strokeWidth:
                                             2, // Adjust thickness of the progress indicator
                                         valueColor:
@@ -105,7 +105,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                         backgroundColor: Colors
                                             .transparent, // Make progress indicator background transparent
                                         value:
-                                            0.5, // Set progress value (0.0 to 1.0)
+                                            0, // Set progress value (0.0 to 1.0)
                                       ),
                                     ),
                                   ],
@@ -116,14 +116,14 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                   alignment: Alignment.centerRight,
                                   width: DeviceDimensions.screenWidth(context) *
                                       0.45, // or specify a specific width
-                                  color: Color.fromARGB(255, 92, 35, 105),
+                                  color: const Color.fromARGB(255, 92, 35, 105),
                                 ),
                               ],
                             ),
                             Align(
                               alignment: Alignment.centerRight,
                               child: Padding(
-                                padding: EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   //crossAxisAlignment: CrossAxisAlignment.end,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +132,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                         width: DeviceDimensions.screenWidth(
                                                 context) *
                                             0.3),
-                                    Text('Describe Task')
+                                    const Text('Describe Task')
                                   ],
                                 ),
                               ),
@@ -154,7 +154,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                 ),
                                 Flexible(
                                   child: Padding(
-                                    padding: EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       'Tell Us About Your Task. We Use These Details To Show Taskers In Your Area Who Fit Your Needs.',
                                       style: TextStyle(
@@ -196,7 +196,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                       Container(
                         height: DeviceDimensions.screenHeight(context) * 0.35,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 239, 233, 240),
+                          color: const Color.fromARGB(255, 239, 233, 240),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -232,9 +232,9 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                 borderRadius: BorderRadius.circular(
                                     12), // Rounded corners
                               ),
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 20), // Adjust padding as needed
-                              child: TextField(
+                              child: const TextField(
                                 decoration: InputDecoration(
                                   hintText: 'Street Address', // Hint text
                                   border: InputBorder.none, // Remove border
@@ -255,9 +255,9 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                 borderRadius: BorderRadius.circular(
                                     12), // Rounded corners
                               ),
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 20), // Adjust padding as needed
-                              child: TextField(
+                              child: const TextField(
                                 decoration: InputDecoration(
                                   hintText: 'Unit or Apt #', // Hint text
                                   border: InputBorder.none, // Remove border
@@ -277,16 +277,20 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => TaskTypeScreen()),
+                                        builder: (context) =>
+                                            const TaskTypeScreen()),
                                   );
                                   print('press');
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color.fromARGB(255, 92, 35,
+                                  backgroundColor: const Color.fromARGB(
+                                      255,
+                                      92,
+                                      35,
                                       105), // Set the background color of the button
                                   // Set the text color
                                 ),
-                                child: Text(
+                                child: const Text(
                                   'Continue',
                                   style: TextStyle(color: Colors.white),
                                 ),
@@ -302,7 +306,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                   height: DeviceDimensions.screenHeight(context) * 0.09,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 239, 233, 240),
+                    color: const Color.fromARGB(255, 239, 233, 240),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
@@ -335,7 +339,7 @@ class _HiringTaskerScreenState extends State<HiringTaskerScreen> {
                   height: DeviceDimensions.screenHeight(context) * 0.09,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 239, 233, 240),
+                    color: const Color.fromARGB(255, 239, 233, 240),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
