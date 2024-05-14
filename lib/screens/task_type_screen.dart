@@ -1,12 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/task_type_screen.dart';
 import 'package:task_rabbit/screens/tasker_form_screen_one.dart';
-import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/items_widget.dart';
-import 'package:task_rabbit/widgets/radio_list_widget.dart';
 
 class TaskTypeScreen extends StatefulWidget {
   const TaskTypeScreen({super.key});
@@ -58,107 +53,105 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                     //color: Colors.blueAccent,
                     height: DeviceDimensions.screenHeight(context) * 0.22,
                     child: Column(children: [
-                      Container(
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      top: 0, bottom: 0, left: 20, right: 20),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Image.asset(
-                                      'assets/images/skip-the-task-logo.jpeg',
-                                      height: 40.0, // Adjust as needed
-                                    ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 0, bottom: 0, left: 20, right: 20),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.asset(
+                                    'assets/images/skip-the-task-logo.jpeg',
+                                    height: 40.0, // Adjust as needed
                                   ),
                                 ),
-                                Stack(
-                                  children: [
-                                    //round circle shape and text
-                                    Container(
-                                      width: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.09, // Adjust size as needed
-                                      height: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.09, // Adjust size as needed
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
+                              ),
+                              Stack(
+                                children: [
+                                  //round circle shape and text
+                                  Container(
+                                    width: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.09, // Adjust size as needed
+                                    height: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.09, // Adjust size as needed
+                                    decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
 
-                                        color: Color.fromARGB(255, 92, 35,
-                                            105), // Change color as needed
-                                      ),
-                                      child: const Center(
-                                        child: Text(
-                                          '1',
-                                          style: TextStyle(
-                                            color: Colors
-                                                .white, // Change text color as needed
-                                            fontSize:
-                                                20, // Adjust font size as needed
-                                            fontWeight: FontWeight
-                                                .bold, // Adjust font weight as needed
-                                          ),
+                                      color: Color.fromARGB(255, 92, 35,
+                                          105), // Change color as needed
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        '1',
+                                        style: TextStyle(
+                                          color: Colors
+                                              .white, // Change text color as needed
+                                          fontSize:
+                                              20, // Adjust font size as needed
+                                          fontWeight: FontWeight
+                                              .bold, // Adjust font weight as needed
                                         ),
                                       ),
                                     ),
-                                    //progress indicator round
-                                    Container(
-                                      width: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.09, // Adjust size as needed
-                                      height: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.09, // Adjust size as needed
-                                      child: const CircularProgressIndicator(
-                                        strokeWidth:
-                                            2, // Adjust thickness of the progress indicator
-                                        valueColor:
-                                            AlwaysStoppedAnimation<Color>(Colors
-                                                .white), // Change progress indicator color
-                                        backgroundColor: Colors
-                                            .transparent, // Make progress indicator background transparent
-                                        value:
-                                            0.3, // Set progress value (0.0 to 1.0)
-                                      ),
+                                  ),
+                                  //progress indicator round
+                                  SizedBox(
+                                    width: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.09, // Adjust size as needed
+                                    height: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.09, // Adjust size as needed
+                                    child: const CircularProgressIndicator(
+                                      strokeWidth:
+                                          2, // Adjust thickness of the progress indicator
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                          Colors
+                                              .white), // Change progress indicator color
+                                      backgroundColor: Colors
+                                          .transparent, // Make progress indicator background transparent
+                                      value:
+                                          0.3, // Set progress value (0.0 to 1.0)
                                     ),
-                                  ],
-                                ),
-                                //line on the right hand side
-                                Container(
-                                  height: 1,
-                                  alignment: Alignment.centerRight,
-                                  width: DeviceDimensions.screenWidth(context) *
-                                      0.45, // or specify a specific width
-                                  color: const Color.fromARGB(255, 92, 35, 105),
-                                ),
-                              ],
-                            ),
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  //crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.3),
-                                    const Text('Describe Task')
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            )
-                          ],
-                        ),
+                              //line on the right hand side
+                              Container(
+                                height: 1,
+                                alignment: Alignment.centerRight,
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.45, // or specify a specific width
+                                color: const Color.fromARGB(255, 92, 35, 105),
+                              ),
+                            ],
+                          ),
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                //crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SizedBox(
+                                      width: DeviceDimensions.screenWidth(
+                                              context) *
+                                          0.3),
+                                  const Text('Describe Task')
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                       Padding(
                         padding: const EdgeInsets.all(12.0),
-                        child: Container(
+                        child: SizedBox(
                             width: DeviceDimensions.screenWidth(context) * 0.9,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -187,7 +180,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                             )),
                       ),
                     ])),
-                Container(
+                SizedBox(
                   height: DeviceDimensions.screenHeight(context) * 0.28,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   child: Column(
@@ -758,9 +751,9 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          TaskerFormOneScreen()),
+                                          const TaskerFormOneScreen()),
                                 );
-                                print('press');
+                                //print('press');
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color.fromARGB(
@@ -786,7 +779,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                 ),
                 SizedBox(
                   height: DeviceDimensions.screenHeight(context) * 0.03,
-                )
+                ),
               ],
             ))
       ]),

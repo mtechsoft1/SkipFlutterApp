@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:geolocator/geolocator.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:task_rabbit/location_service/location_helper.dart';
-import 'package:task_rabbit/responsive/desktop_body.dart';
-import 'package:task_rabbit/responsive/mobile_body.dart';
-import 'package:task_rabbit/responsive/responsive_layout.dart';
-import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
 import 'package:task_rabbit/screens/home_screen.dart';
 
 class New extends StatefulWidget {
@@ -16,6 +10,7 @@ class New extends StatefulWidget {
 }
 
 class _NewState extends State<New> {
+  @override
   void initState() {
     super.initState();
     // Call getLocation method in initState
@@ -30,7 +25,7 @@ class _NewState extends State<New> {
     //     mobile_body: MobileBody(),
     //     desktop_body: DesktopBody()),
     //     );
-    return HomeScreen();
+    return const HomeScreen();
     //return HiringTaskerScreen();
   }
 }

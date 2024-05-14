@@ -1,14 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
 import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
-
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
-
 import 'package:task_rabbit/widgets/popular_projects_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -82,170 +77,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         drawer: buildLeftDrawer(context),
-        // drawer: Drawer(
-        //   width: DeviceDimensions.screenWidth(context) * 0.6,
-        //   child: Stack(
-        //     children: [
-        //       ListView(
-        //         padding: EdgeInsets.zero,
-        //         children: <Widget>[
-        //           Align(
-        //             alignment: Alignment.bottomRight,
-        //             child: Positioned(
-        //               top: 0,
-        //               right: 0,
-        //               child: IconButton(
-        //                 icon: Icon(Icons.close),
-        //                 onPressed: () {
-        //                   Navigator.pop(context); // Close the drawer
-        //                 },
-        //               ),
-        //             ),
-        //           ),
-        //           ListTile(
-        //             title: Row(
-        //               mainAxisAlignment: MainAxisAlignment.start,
-        //               children: <Widget>[
-        //                 Icon(Icons.language),
-        //                 SizedBox(width: 8), // Space between icon and text
-        //                 //Text('EN'),
-        //                 //SizedBox(width: 8), // Space between text and dropdown
-        //                 DropdownButton<String>(
-        //                   value: 'EN', // Initially selected value
-        //                   onChanged: (String? newValue) {
-        //                     // Handle dropdown value change
-        //                   },
-        //                   items: <String>['EN', 'SP', 'FR'] // Dropdown items
-        //                       .map<DropdownMenuItem<String>>((String value) {
-        //                     return DropdownMenuItem<String>(
-        //                       value: value,
-        //                       child: Text(value),
-        //                     );
-        //                   }).toList(),
-        //                 ),
-        //                 Spacer(), // Flexible space to push the toggle button to the right
-        //                 ThemeToggle(),
-        //               ],
-        //             ),
-        //           ),
-        //           ListTile(
-        //             title: Text('Home',
-        //                 style: TextStyle(
-        //                     fontFamily: 'Roboto',
-        //                     fontSize:
-        //                         DeviceDimensions.responsiveSize(context) * 0.04)),
-        //             onTap: () {
-        //               // Do something
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: Text('Our Services',
-        //                 style: TextStyle(
-        //                     fontFamily: 'Roboto',
-        //                     fontSize:
-        //                         DeviceDimensions.responsiveSize(context) * 0.04)),
-        //             onTap: () {
-        //               // Do something
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: Text('Privacy Policy',
-        //                 style: TextStyle(
-        //                     fontFamily: 'Roboto',
-        //                     fontSize:
-        //                         DeviceDimensions.responsiveSize(context) * 0.04)),
-        //             onTap: () {
-        //               // Do something
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: Text('About Us',
-        //                 style: TextStyle(
-        //                     fontFamily: 'Roboto',
-        //                     fontSize:
-        //                         DeviceDimensions.responsiveSize(context) * 0.04)),
-        //             onTap: () {
-        //               // Do something
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: Text('Settings',
-        //                 style: TextStyle(
-        //                     fontFamily: 'Roboto',
-        //                     fontSize:
-        //                         DeviceDimensions.responsiveSize(context) * 0.04)),
-        //             onTap: () {
-        //               // Do something
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: Text('Log Out',
-        //                 style: TextStyle(
-        //                     fontFamily: 'Roboto',
-        //                     fontSize:
-        //                         DeviceDimensions.responsiveSize(context) * 0.04)),
-        //             onTap: () {
-        //               // Do something
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: ElevatedButton(
-        //               onPressed: () {
-        //                 // Do something
-        //               },
-        //               style: ElevatedButton.styleFrom(
-        //                 backgroundColor:
-        //                     Color.fromARGB(255, 125, 79, 135), // Background color
-        //               ),
-        //               child: Text('Contact Us',
-        //                   style: TextStyle(color: Colors.white)),
-        //             ),
-        //             onTap: () {
-        //               // Do something else if needed
-        //             },
-        //           ),
-        //           ListTile(
-        //             title: ElevatedButton(
-        //               onPressed: () {
-        //                 // Do something
-        //               },
-        //               style: ElevatedButton.styleFrom(
-        //                 backgroundColor:
-        //                     Color.fromARGB(255, 125, 79, 135), // Background color
-        //               ),
-        //               child: Text('Become a Provider',
-        //                   style: TextStyle(color: Colors.white)),
-        //             ),
-        //             onTap: () {
-        //               // Do something else if needed
-        //             },
-        //           ),
-        //         ],
-        //       ),
-        //       //bottom image
-        //       Positioned(
-        //         left: 0,
-        //         bottom: 0,
-        //         child: Align(
-        //           alignment: Alignment.bottomRight,
-        //           child: Image.asset(
-        //             'assets/images/provider.jpeg', // Replace with your image path
-        //             width: DeviceDimensions.screenWidth(context) * 0.7,
-        //             //height: 100,
-        //             fit: BoxFit.fitWidth,
-        //           ),
-        //         ),
-        //       )
-        //     ],
-        //   ),
-        // ),
 
         body: SingleChildScrollView(
           child: Column(
             children: [
               //header container
               Container(
-                  height: DeviceDimensions.screenHeight(context) * 0.25,
+                  // height: DeviceDimensions.screenHeight(context) * 0.25,
                   width: DeviceDimensions.screenWidth(context),
                   //color: Colors.amber,
                   decoration: BoxDecoration(
@@ -929,160 +767,158 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Center(
-                        child: Container(
-                            child: Table(
-                      children: const [
-                        TableRow(
-                          children: [
+                      child: Table(
+                        children: const [
+                          TableRow(
+                            children: [
+                              PopularProjectsWidget(
+                                imagePath:
+                                    'assets/images/furniture_assembly.png',
+                                text: 'Furniture Assembly',
+                                button_text: 'Book Now',
+                              ),
+                              PopularProjectsWidget(
+                                imagePath:
+                                    'assets/images/mounting_art_shelves.png',
+                                text: 'Mounting Art Or Shelves',
+                                button_text: 'Book Now',
+                              ),
+                            ],
+                          ),
+                          TableRow(children: [
                             PopularProjectsWidget(
-                              imagePath: 'assets/images/furniture_assembly.png',
-                              text: 'Furniture Assembly',
+                              imagePath: 'assets/images/mounting_tv.png',
+                              text: 'Mounting A Tv',
                               button_text: 'Book Now',
                             ),
                             PopularProjectsWidget(
-                              imagePath:
-                                  'assets/images/mounting_art_shelves.png',
-                              text: 'Mounting Art Or Shelves',
+                              imagePath: 'assets/images/help_moving.png',
+                              text: 'Help Moving',
                               button_text: 'Book Now',
                             ),
-                          ],
-                        ),
-                        TableRow(children: [
-                          PopularProjectsWidget(
-                            imagePath: 'assets/images/mounting_tv.png',
-                            text: 'Mounting A Tv',
-                            button_text: 'Book Now',
-                          ),
-                          PopularProjectsWidget(
-                            imagePath: 'assets/images/help_moving.png',
-                            text: 'Help Moving',
-                            button_text: 'Book Now',
-                          ),
-                        ])
-                      ],
-                    ))),
+                          ])
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               //who we work
               Container(
-                  height: DeviceDimensions.screenHeight(context) * 0.5,
-                  width: DeviceDimensions.screenWidth(context) * 0.85,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/whowework.jpeg'),
-                        fit: BoxFit.cover,
-                        colorFilter: ColorFilter.mode(
-                          Color.fromARGB(255, 0, 0, 0)
-                              .withOpacity(0.5), // Adjust opacity as needed
-                          BlendMode.darken, // Choose desired BlendMode
+                height: DeviceDimensions.screenHeight(context) * 0.5,
+                width: DeviceDimensions.screenWidth(context) * 0.85,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/whowework.jpeg'),
+                      fit: BoxFit.cover,
+                      colorFilter: ColorFilter.mode(
+                        Color.fromARGB(255, 0, 0, 0)
+                            .withOpacity(0.5), // Adjust opacity as needed
+                        BlendMode.darken, // Choose desired BlendMode
+                      ),
+                    )),
+                //color: Colors.green
+                child: Stack(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: SizedBox(
+                              //height: screenHeight * 0.05,
+                              child: Text(
+                            'Who We Work',
+                            style: TextStyle(
+                                fontFamily: 'Roboto-Bold',
+                                color: Colors.white,
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.05),
+                          )),
                         ),
-                      )),
-                  //color: Colors.green
-                  child: Stack(
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: SizedBox(
-                                //height: screenHeight * 0.05,
-                                child: Text(
-                              'Who We Work',
-                              style: TextStyle(
-                                  fontFamily: 'Roboto-Bold',
-                                  color: Colors.white,
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.05),
-                            )),
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 12.0),
-                            child: SizedBox(
-                                //height: screenHeight * 0.05,
-                                child: Text(
-                              'We will not take anyone or anything for granted. We are grateful for our people, members, and our greater community as well as for the opportunities we have in front of us.',
-                              style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  color: Colors.white,
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.04),
-                              softWrap: true,
-                            )),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: SizedBox(
-                                //height: screenHeight * 0.05,
-                                child: Text(
-                              'Why Choose Us',
-                              style: TextStyle(
-                                  fontFamily: 'Roboto-Bold',
-                                  color: Colors.white,
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.05),
-                            )),
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 12.0),
-                            child: SizedBox(
-                                //height: screenHeight * 0.05,
-                                child: Text(
-                              'Our team of experienced professionals taskers is committed to providing top-notch services to you.',
-                              style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  color: Colors.white,
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.04),
-                              softWrap: true,
-                            )),
-                          ),
-                          SizedBox(
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.01,
-                          ),
-                          SizedBox(
-                              width:
-                                  DeviceDimensions.screenWidth(context) * 0.35,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 180, 154, 186),
-                                      borderRadius: BorderRadius.circular(8)),
-                                  child: Row(
-                                    children: [
-                                      TextButton(
-                                        onPressed: () {},
-                                        child: Text('Book Now',
-                                            style:
-                                                TextStyle(color: Colors.white)),
-                                      ),
-                                      Icon(
-                                        Icons
-                                            .arrow_right_alt, // Specify the icon you want to use
-                                        color: Colors.white,
-                                        size: 20,
-                                      ),
-                                    ],
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                          child: SizedBox(
+                              //height: screenHeight * 0.05,
+                              child: Text(
+                            'We will not take anyone or anything for granted. We are grateful for our people, members, and our greater community as well as for the opportunities we have in front of us.',
+                            style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.04),
+                            softWrap: true,
+                          )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: SizedBox(
+                              //height: screenHeight * 0.05,
+                              child: Text(
+                            'Why Choose Us',
+                            style: TextStyle(
+                                fontFamily: 'Roboto-Bold',
+                                color: Colors.white,
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.05),
+                          )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                          child: SizedBox(
+                              //height: screenHeight * 0.05,
+                              child: Text(
+                            'Our team of experienced professionals taskers is committed to providing top-notch services to you.',
+                            style: TextStyle(
+                                fontFamily: 'Roboto',
+                                color: Colors.white,
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.04),
+                            softWrap: true,
+                          )),
+                        ),
+                        SizedBox(
+                          height: DeviceDimensions.screenHeight(context) * 0.01,
+                        ),
+                        SizedBox(
+                          width: DeviceDimensions.screenWidth(context) * 0.35,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 180, 154, 186),
+                                  borderRadius: BorderRadius.circular(8)),
+                              child: Row(
+                                children: [
+                                  TextButton(
+                                    onPressed: () {},
+                                    child: Text('Book Now',
+                                        style: TextStyle(color: Colors.white)),
                                   ),
-                                ),
-                              )),
-                          //SizedBox(height: screenHeight * 0.001),
-                        ],
-                      )
-                    ],
-                  )),
+                                  Icon(
+                                    Icons
+                                        .arrow_right_alt, // Specify the icon you want to use
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        //SizedBox(height: screenHeight * 0.001),
+                      ],
+                    )
+                  ],
+                ),
+              ),
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               //testimonial
               // Container(

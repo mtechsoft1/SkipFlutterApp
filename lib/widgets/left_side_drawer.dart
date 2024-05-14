@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
+import 'package:task_rabbit/screens/home_screen.dart';
+import 'package:task_rabbit/screens/our_services_screen.dart';
 import 'package:task_rabbit/theme_toggle.dart';
 
 Widget buildLeftDrawer(BuildContext context) {
@@ -56,7 +58,12 @@ Widget buildLeftDrawer(BuildContext context) {
                       fontSize:
                           DeviceDimensions.responsiveSize(context) * 0.04)),
               onTap: () {
-                // Do something
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ),
+                );
               },
             ),
             ListTile(
@@ -66,7 +73,12 @@ Widget buildLeftDrawer(BuildContext context) {
                       fontSize:
                           DeviceDimensions.responsiveSize(context) * 0.04)),
               onTap: () {
-                // Do something
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OurServicesScreen(),
+                  ),
+                );
               },
             ),
             ListTile(

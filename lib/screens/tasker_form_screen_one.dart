@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
+import 'package:task_rabbit/screens/tasker_form_screen_two.dart';
 
 class TaskerFormOneScreen extends StatefulWidget {
   const TaskerFormOneScreen({super.key});
@@ -649,7 +650,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      TaskerFormOneScreen()),
+                                                      TaskerFormTwoScreen()),
                                             );
                                             print('press');
                                           },
@@ -710,6 +711,23 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Container(
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 204, 187, 209),
+                                              borderRadius:
+                                                  BorderRadius.circular(12)),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text('\$46.45/Hr'),
+                                          ))
+                                    ],
+                                  ),
                                   Text('How I can help:',
                                       style: TextStyle(
                                           fontFamily: 'Roboto-Medium',
@@ -815,7 +833,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      TaskerFormOneScreen()),
+                                                      TaskerFormTwoScreen()),
                                             );
                                             print('press');
                                           },
@@ -876,6 +894,23 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Container(
+                                          decoration: BoxDecoration(
+                                              color: Color.fromARGB(
+                                                  255, 204, 187, 209),
+                                              borderRadius:
+                                                  BorderRadius.circular(12)),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text('\$46.45/Hr'),
+                                          ))
+                                    ],
+                                  ),
                                   Text('How I can help:',
                                       style: TextStyle(
                                           fontFamily: 'Roboto-Medium',
