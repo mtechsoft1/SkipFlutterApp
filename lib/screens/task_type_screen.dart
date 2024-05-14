@@ -413,7 +413,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                                 isSelected: selectedCell == 3,
                                 onChanged: (value) {
                                   setState(() {
-                                    selectedCell = value! ? 0 : null;
+                                    selectedCell = value! ? 3 : null;
                                   });
                                 },
                               ),

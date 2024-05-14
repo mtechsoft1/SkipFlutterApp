@@ -11,6 +11,13 @@ class TaskerFormOneScreen extends StatefulWidget {
 }
 
 class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
+  bool? _morningChecked = false;
+  bool? _afternoonChecked = false;
+  bool? _eveningChecked = false;
+
+  RangeValues _values = RangeValues(0.0, 100.0);
+  static const double _min = 0.0;
+  static const double _max = 100.0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -228,7 +235,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                         ),
                       ),
                       Container(
-                        height: DeviceDimensions.screenHeight(context) * 0.28,
+                        //height: DeviceDimensions.screenHeight(context) * 0.28,
                         width: DeviceDimensions.screenWidth(context) * 0.9,
                         decoration: BoxDecoration(
                             color: Color.fromARGB(255, 239, 233, 240),
@@ -274,11 +281,12 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0),
+                                          horizontal: 6.0),
                                       child: Container(
                                         width: DeviceDimensions.screenWidth(
                                                 context) *
@@ -292,6 +300,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                             border: Border.all()),
                                         child: Text(
                                           'Today',
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontFamily: 'Roboto',
                                               fontSize: DeviceDimensions
@@ -302,7 +311,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0),
+                                          horizontal: 6.0),
                                       child: Container(
                                         width: DeviceDimensions.screenWidth(
                                                 context) *
@@ -316,6 +325,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                             border: Border.all()),
                                         child: Text(
                                           'In 3 Days',
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontFamily: 'Roboto',
                                               fontSize: DeviceDimensions
@@ -326,7 +336,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0),
+                                          horizontal: 6.0),
                                       child: Container(
                                         width: DeviceDimensions.screenWidth(
                                                 context) *
@@ -340,6 +350,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                             border: Border.all()),
                                         child: Text(
                                           'In A Week',
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontFamily: 'Roboto',
                                               fontSize: DeviceDimensions
@@ -350,7 +361,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 8.0),
+                                          horizontal: 6.0),
                                       child: Container(
                                         width: DeviceDimensions.screenWidth(
                                                 context) *
@@ -364,6 +375,7 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                             border: Border.all()),
                                         child: Text(
                                           'Choose',
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
                                               fontFamily: 'Roboto',
                                               fontSize: DeviceDimensions
@@ -375,74 +387,390 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                                   ],
                                 ),
                               ),
+                            ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    width:
+                                        DeviceDimensions.screenWidth(context) *
+                                            0.4,
+                                    //color: Colors.blue,
+                                    child: Center(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 12.0),
+                                            child: Text(
+                                              'Time Of Day',
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                  fontSize: DeviceDimensions
+                                                          .responsiveSize(
+                                                              context) *
+                                                      0.04,
+                                                  fontFamily: 'Roboto-Medium'),
+                                            ),
+                                          ),
+                                          CheckboxListTile(
+                                            title: Text(
+                                              'Morning 8am - 12pm',
+                                              style: TextStyle(
+                                                  fontSize: DeviceDimensions
+                                                          .responsiveSize(
+                                                              context) *
+                                                      0.035),
+                                            ),
+                                            controlAffinity:
+                                                ListTileControlAffinity.leading,
+                                            value: _morningChecked,
+                                            onChanged: (bool? value) {
+                                              setState(() {
+                                                _morningChecked = value;
+                                              });
+                                            },
+                                          ),
+                                          CheckboxListTile(
+                                            title: Text(
+                                              'Afternoon 12pm - 5pm',
+                                              style: TextStyle(
+                                                  fontSize: DeviceDimensions
+                                                          .responsiveSize(
+                                                              context) *
+                                                      0.035),
+                                            ),
+                                            controlAffinity:
+                                                ListTileControlAffinity.leading,
+                                            value: _afternoonChecked,
+                                            onChanged: (bool? value) {
+                                              setState(() {
+                                                _afternoonChecked = value;
+                                              });
+                                            },
+                                          ),
+                                          CheckboxListTile(
+                                            title: Text(
+                                              'Evening 5pm - 9:30pm',
+                                              style: TextStyle(
+                                                  fontSize: DeviceDimensions
+                                                          .responsiveSize(
+                                                              context) *
+                                                      0.035),
+                                            ),
+                                            value: _eveningChecked,
+                                            controlAffinity:
+                                                ListTileControlAffinity.leading,
+                                            onChanged: (bool? value) {
+                                              setState(() {
+                                                _eveningChecked = value;
+                                              });
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    //color: Colors.green,
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 12.0),
+                                          child: Text(
+                                            '--Choose A Suitable Time--',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                                fontSize: DeviceDimensions
+                                                        .responsiveSize(
+                                                            context) *
+                                                    0.04,
+                                                fontFamily: 'Roboto-Medium'),
+                                          ),
+                                        ),
+                                        Container(
+                                          height: DeviceDimensions.screenHeight(
+                                                  context) *
+                                              0.05,
+                                          width: DeviceDimensions.screenWidth(
+                                                  context) *
+                                              0.4,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            border: Border.all(),
+                                          ),
+                                          child: Center(
+                                            child: DropdownButton<String>(
+                                              value: 'Choose Time',
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                              ), // Initially selected value
+                                              onChanged: (String? newValue) {
+                                                // Handle dropdown value change
+                                              },
+                                              items: <String>[
+                                                'Choose Time',
+                                                '8am',
+                                                '12pm',
+                                                '5pm',
+                                              ] // Dropdown items
+                                                  .map<
+                                                          DropdownMenuItem<
+                                                              String>>(
+                                                      (String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Text(value),
+                                                );
+                                              }).toList(),
+                                            ),
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.stretch,
+                                          children: <Widget>[
+                                            RangeSlider(
+                                              values: _values,
+                                              min: _min,
+                                              max: _max,
+                                              onChanged:
+                                                  (RangeValues newValues) {
+                                                setState(() {
+                                                  _values = newValues;
+                                                });
+                                              },
+                                              divisions: _max.toInt(),
+                                              labels: RangeLabels(
+                                                _values.start
+                                                    .round()
+                                                    .toString(),
+                                                _values.end.round().toString(),
+                                              ),
+                                              activeColor: Color.fromARGB(
+                                                  255,
+                                                  92,
+                                                  35,
+                                                  105), // Change the color of the active part of the slider bar
+                                              inactiveColor: Colors
+                                                  .grey, // Change the color of the inactive part of the slider bar
+                                              //thumbColor: Colors.red,
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              Text('\$10'),
+                                              Spacer(),
+                                              Text('\$150')
+                                            ],
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                                'The Average per hour rate is : '),
+                                            Text('\$3.21',
+                                                style: TextStyle(
+                                                    fontFamily:
+                                                        'Roboto-Medium')),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.02)
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: DeviceDimensions.screenHeight(context) * 0.03,
+                      ),
+                      Container(
+                        //height: DeviceDimensions.screenHeight(context) * 0.09,
+                        width: DeviceDimensions.screenWidth(context) * 0.9,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 239, 233, 240),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        child: Image.asset(
+                                          'assets/images/tasker.png',
+                                          fit: BoxFit.fill,
+                                        )),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        child: Text('View Profile & Continue',
+                                            style: TextStyle(
+                                                fontFamily: 'Roboto-Medium')),
+                                      ),
+                                      SizedBox(
+                                        width: DeviceDimensions.screenWidth(
+                                                context) *
+                                            0.4,
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      TaskerFormOneScreen()),
+                                            );
+                                            print('press');
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: const Color
+                                                .fromARGB(255, 92, 35,
+                                                105), // Set the background color of the button
+                                            // Set the text color
+                                          ),
+                                          child: const Text(
+                                            'Continue',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                          child: Text(
+                                              'You can chat with your Tasker, adjust task details, or change task time after booking.'))
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12.0,
+                                  vertical: 10,
+                                ),
+                                child: Column(
+                                  //mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,
+                                            color: Colors.amber,
+                                            size:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.05),
+                                        Text('5.0 (887 reviews)'),
+                                      ],
+                                    ),
+                                    Text('1525 Furniture Assembly tasks',
+                                        style: TextStyle(
+                                            fontFamily: 'Roboto-medium')),
+                                    Text('1516 Assembly tasks overall'),
+                                    Text('Vehicle : Car')
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('How I can help:',
+                                      style: TextStyle(
+                                          fontFamily: 'Roboto-Medium',
+                                          fontSize:
+                                              DeviceDimensions.responsiveSize(
+                                                      context) *
+                                                  0.04)),
+                                  const Text(
+                                      'Will bring all tools necessary for the task and will be very mindful to do the job well. Please detail well if anything needs to be mounted. 2 hour minimum for bookings on Saturday and Sunday.'),
+                                  const Text('Read More',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 92, 35, 105),
+                                          fontFamily: 'Roboto-Medium')),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      CircleAvatar(
+                                        backgroundImage: AssetImage(
+                                            'assets/images/review-person.png'),
+                                      ),
+                                      SizedBox(
+                                        width: DeviceDimensions.screenWidth(
+                                                context) *
+                                            0.02,
+                                      ),
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  'Smith Adam',
+                                                  style: TextStyle(
+                                                      fontFamily:
+                                                          'Roboto-Medium'),
+                                                ),
+                                                Text(
+                                                  'on Sun Apr 28',
+                                                  style: TextStyle(
+                                                      fontFamily:
+                                                          'Roboto-Medium'),
+                                                ),
+                                              ],
+                                            ),
+                                            Text(
+                                                '"Giovanny was great. I highly recommend him. "')
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
                             )
                           ],
                         ),
                       ),
-                      Container(
-                        //height: DeviceDimensions.screenHeight(context) * 0.09,
-                        width: DeviceDimensions.screenWidth(context) * 0.9,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 239, 233, 240),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      'Your Items',
-                                      style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.04),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 16.0),
-                                  child: Container(
-                                    width:
-                                        DeviceDimensions.screenWidth(context) *
-                                            0.8,
-                                    decoration: const BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: Colors
-                                              .black, // Adjust the color of the underline as needed
-                                          width:
-                                              1.0, // Adjust the width of the underline as needed
-                                        ),
-                                      ),
-                                    ),
-                                    child: Text(
-                                      'What Type Of Furniture Do You Need Assembled Or Disassembled?',
-                                      style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.035),
-                                      softWrap: true,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
                       SizedBox(
                         height: DeviceDimensions.screenHeight(context) * 0.03,
                       ),
@@ -455,153 +783,163 @@ class _TaskerFormOneScreenState extends State<TaskerFormOneScreen> {
                         ),
                         child: Column(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text(
-                                      'Task Option',
-                                      style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.04),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                             Row(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 16.0),
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: Colors
-                                              .black, // Adjust the color of the underline as needed
-                                          width:
-                                              1.0, // Adjust the width of the underline as needed
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(100),
+                                        child: Image.asset(
+                                          'assets/images/tasker.png',
+                                          fit: BoxFit.fill,
+                                        )),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        child: Text('View Profile & Continue',
+                                            style: TextStyle(
+                                                fontFamily: 'Roboto-Medium')),
+                                      ),
+                                      SizedBox(
+                                        width: DeviceDimensions.screenWidth(
+                                                context) *
+                                            0.4,
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      TaskerFormOneScreen()),
+                                            );
+                                            print('press');
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: const Color
+                                                .fromARGB(255, 92, 35,
+                                                105), // Set the background color of the button
+                                            // Set the text color
+                                          ),
+                                          child: const Text(
+                                            'Continue',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    child: Text(
-                                      'How Long Is Your Task?',
-                                      style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.045),
-                                    ),
+                                      Container(
+                                          child: Text(
+                                              'You can chat with your Tasker, adjust task details, or change task time after booking.'))
+                                    ],
                                   ),
                                 ),
                               ],
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [],
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12.0,
+                                  vertical: 10,
+                                ),
+                                child: Column(
+                                  //mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,
+                                            color: Colors.amber,
+                                            size:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.05),
+                                        Text('5.0 (887 reviews)'),
+                                      ],
+                                    ),
+                                    Text('1525 Furniture Assembly tasks',
+                                        style: TextStyle(
+                                            fontFamily: 'Roboto-medium')),
+                                    Text('1516 Assembly tasks overall'),
+                                    Text('Vehicle : Car')
+                                  ],
+                                ),
+                              ),
                             ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: DeviceDimensions.screenHeight(context) * 0.03,
-                      ),
-                      Container(
-                        //height: DeviceDimensions.screenHeight(context) * 0.09,
-                        width: DeviceDimensions.screenWidth(context) * 0.9,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 239, 233, 240),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
                             Padding(
                               padding: const EdgeInsets.all(12.0),
-                              child: Text(
-                                'Detail Your Task',
-                                style: TextStyle(
-                                    fontFamily: 'Roboto-Medium',
-                                    fontSize: DeviceDimensions.responsiveSize(
-                                            context) *
-                                        0.04),
-                                softWrap: true,
-                                overflow: TextOverflow.visible,
-                                maxLines: 2,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('How I can help:',
+                                      style: TextStyle(
+                                          fontFamily: 'Roboto-Medium',
+                                          fontSize:
+                                              DeviceDimensions.responsiveSize(
+                                                      context) *
+                                                  0.04)),
+                                  const Text(
+                                      'Will bring all tools necessary for the task and will be very mindful to do the job well. Please detail well if anything needs to be mounted. 2 hour minimum for bookings on Saturday and Sunday.'),
+                                  const Text('Read More',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 92, 35, 105),
+                                          fontFamily: 'Roboto-Medium')),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      CircleAvatar(
+                                        backgroundImage: AssetImage(
+                                            'assets/images/review-person.png'),
+                                      ),
+                                      SizedBox(
+                                        width: DeviceDimensions.screenWidth(
+                                                context) *
+                                            0.02,
+                                      ),
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  'Smith Adam',
+                                                  style: TextStyle(
+                                                      fontFamily:
+                                                          'Roboto-Medium'),
+                                                ),
+                                                Text(
+                                                  'on Sun Apr 28',
+                                                  style: TextStyle(
+                                                      fontFamily:
+                                                          'Roboto-Medium'),
+                                                ),
+                                              ],
+                                            ),
+                                            Text(
+                                                '"Giovanny was great. I highly recommend him. "')
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
-                            ),
-                            Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 16.0),
-                                  child: Text(
-                                    'Provide Us With More Details So We Can Match You With The Perfect Expert Tasker.',
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto-Medium',
-                                        fontSize:
-                                            DeviceDimensions.responsiveSize(
-                                                    context) *
-                                                0.035),
-                                    softWrap: true,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                  ),
-                                ),
-                                SizedBox(
-                                    height:
-                                        DeviceDimensions.screenHeight(context) *
-                                            0.02),
-                                SizedBox(
-                                    height:
-                                        DeviceDimensions.screenHeight(context) *
-                                            0.02),
-                                SizedBox(
-                                  width: DeviceDimensions.screenWidth(context) *
-                                      0.4,
-                                  child: ElevatedButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                TaskerFormOneScreen()),
-                                      );
-                                      print('press');
-                                    },
-                                    style: ElevatedButton.styleFrom(
-                                      backgroundColor: const Color.fromARGB(
-                                          255,
-                                          92,
-                                          35,
-                                          105), // Set the background color of the button
-                                      // Set the text color
-                                    ),
-                                    child: const Text(
-                                      'Continue',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                    height:
-                                        DeviceDimensions.screenHeight(context) *
-                                            0.02),
-                              ],
-                            ),
+                            )
                           ],
                         ),
                       ),
                       SizedBox(
                         height: DeviceDimensions.screenHeight(context) * 0.03,
-                      )
+                      ),
                     ],
                   ))
             ],
