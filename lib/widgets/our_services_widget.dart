@@ -76,7 +76,7 @@ class OurServicesWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4)),
                   child: TextButton(
                     onPressed: () {
-                      onPressed;
+                      onPressed();
                     },
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,

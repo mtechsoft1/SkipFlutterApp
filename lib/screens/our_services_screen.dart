@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
 import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
+import 'package:task_rabbit/screens/service_detail_screen.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
@@ -213,7 +214,15 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                                 headingText: 'Handyman',
                                 detailText:
                                     'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const ServiceDetailScreen()),
+                                  );
+                                  print('service detail screen ');
+                                },
                               ),
                               OurServicesWidget(
                                 imagePath: 'assets/images/cleaning-list.png',
