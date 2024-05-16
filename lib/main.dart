@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:task_rabbit/screens/new.dart';
+import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       //home: Screen(),
       //home: UserLocation(),
       //home: LocationService(),
+      //home: TeamCarousel(),
     );
   }
 }

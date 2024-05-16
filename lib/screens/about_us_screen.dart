@@ -11,14 +11,14 @@ import 'package:task_rabbit/widgets/our_services_widget.dart';
 import 'package:task_rabbit/widgets/popular_projects_widget.dart';
 import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
 
-class ServiceDetailScreen extends StatefulWidget {
-  const ServiceDetailScreen({super.key});
+class AboutUsScreen extends StatefulWidget {
+  const AboutUsScreen({super.key});
 
   @override
-  State<ServiceDetailScreen> createState() => _ServiceDetailScreenState();
+  State<AboutUsScreen> createState() => _AboutUsScreenState();
 }
 
-class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
+class _AboutUsScreenState extends State<AboutUsScreen> {
   final List<String> serviceDetail = [
     'Restoring Functionality, One Repair',
     'Repairing your Problems Restoring',
@@ -166,7 +166,7 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                               height:
                                   DeviceDimensions.screenHeight(context) * 0.05,
                               child: Center(
-                                child: Text('Service Detail',
+                                child: Text('About Us',
                                     style: TextStyle(
                                         fontFamily: 'Roboto-Medium',
                                         color: Colors.white,
@@ -181,7 +181,7 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                         )
                       ],
                     )),
-                //icon container
+
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.03),
 
                 Container(
