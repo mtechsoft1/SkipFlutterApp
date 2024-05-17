@@ -7,7 +7,7 @@ Widget buildBottomNavBar(BuildContext context) {
   return Container(
     width: DeviceDimensions.screenWidth(context),
     decoration: const BoxDecoration(
-      color: Color.fromARGB(255, 146, 108, 153),
+      color: Color.fromARGB(255, 146, 108, 155),
     ),
     child: SafeArea(
       child: Padding(

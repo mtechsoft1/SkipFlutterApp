@@ -447,11 +447,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-
-                            // SizedBox(
-                            //     width:
-                            //         10), // Add some space between the image and text
-
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -661,6 +656,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   )),
+
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               //become a provider
               Container(

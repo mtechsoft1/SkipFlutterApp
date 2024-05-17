@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
 import 'package:task_rabbit/screens/about_us_screen.dart';
+import 'package:task_rabbit/screens/contact_us_screen.dart';
 import 'package:task_rabbit/screens/home_screen.dart';
 import 'package:task_rabbit/screens/our_services_screen.dart';
 import 'package:task_rabbit/theme_toggle.dart';
@@ -130,7 +131,12 @@ Widget buildLeftDrawer(BuildContext context) {
             ListTile(
               title: ElevatedButton(
                 onPressed: () {
-                  // Do something
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ContactUsScreen(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor:
@@ -139,9 +145,6 @@ Widget buildLeftDrawer(BuildContext context) {
                 child:
                     Text('Contact Us', style: TextStyle(color: Colors.white)),
               ),
-              onTap: () {
-                // Do something else if needed
-              },
             ),
             ListTile(
               title: ElevatedButton(
