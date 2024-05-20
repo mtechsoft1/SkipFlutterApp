@@ -18,16 +18,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       title: 'Task Rabbit',
       debugShowCheckedModeBanner: false,
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   useMaterial3: true,
-      // ),
       home: const New(),
-      //home: HomeScreen(),
-      //home: Screen(),
-      //home: UserLocation(),
-      //home: LocationService(),
-      //home: TeamCarousel(),
     );
   }
 }

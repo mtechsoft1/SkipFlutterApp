@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
 import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
+import 'package:task_rabbit/screens/instant_request_index_screen.dart';
+import 'package:task_rabbit/screens/instant_request_main.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
@@ -274,7 +277,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                                             108,
                                                             155)), // Set the background color here
                                               ),
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        //InstantRequestIndexScreen(),
+                                                        InstantRequestMainScreen(),
+                                                  ),
+                                                );
+                                              },
                                               child: Text(
                                                 'Instant Request',
                                                 style: TextStyle(
@@ -916,193 +928,127 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
-              //testimonial
-              // Container(
-              //     height: screenHeight * 0.5,
-              //     width: screenWidth * 0.85,
-              //     color: Colors.blueGrey,
 
-              //     //color: Colors.green
-              //     child: Stack(
-              //       children: [
-              //         Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           crossAxisAlignment: CrossAxisAlignment.start,
-              //           children: [
-              //             Row(
-              //               children: [
-              //                 Container(
-              //                   width: screenWidth * 0.4,
-              //                   height: screenHeight * 0.2,
-              //                   color: Colors.purple,
-              //                 ),
-              //                 Container(
-              //                   width: screenWidth * 0.4,
-              //                   height: screenHeight * 0.4,
-              //                   color: Colors.yellow,
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         )
-              //       ],
-              //     )),
-
-              // Container(
-              //   width: screenWidth * 0.8,
-              //   height: screenHeight * 0.5,
-              //   decoration: BoxDecoration(
-              //     color: Colors.blueGrey,
-              //     borderRadius: BorderRadius.circular(10),
-              //   ),
-              //   child: Stack(
-              //     children: [
-              //       Positioned(
-              //         top: 45,
-              //         right: 0,
-              //         child: Container(
-              //             width: screenWidth * 0.8,
-              //             height: screenHeight * 0.4,
-              //             decoration: BoxDecoration(
-              //               borderRadius: BorderRadius.circular(12),
-              //               color: Color.fromARGB(255, 65, 25, 75),
-              //             ),
-              //             child: Column(children: [
-              //               Padding(
-              //                 padding: const EdgeInsets.all(10.0),
-              //                 child: Column(
-              //                   children: [
-              //                     CircleAvatar(
-              //                       backgroundImage:
-              //                           AssetImage('assets/images/olivia.png'),
-              //                     ),
-              //                   ],
-              //                 ),
-              //               ),
-              //             ])),
-              //       ),
-              //       Positioned(
-              //         top: -15,
-              //         left: 0,
-              //         child: Column(
-              //           children: [
-              //             Container(
-              //               // Placeholder for the top left image
-              //               width: responsiveSize * 0.35,
-              //               height: responsiveSize * 0.35,
-              //               decoration: BoxDecoration(
-              //                 image: DecorationImage(
-              //                   image: AssetImage('assets/images/testimonial.png'),
-              //                   fit: BoxFit.contain,
-              //                 ),
-              //                 borderRadius: BorderRadius.circular(10),
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              Container(
-                //color: Colors.blueGrey,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 65, 25, 75),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.center,
+              Stack(
+                children: [
+                  Container(
+                    //color: Colors.blueGrey,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 65, 25, 75),
+                                borderRadius: BorderRadius.circular(12)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
                                 children: [
-                                  Column(children: [
-                                    CircleAvatar(
-                                      backgroundImage: AssetImage(
-                                          'assets/images/olivia.png'), // Replace with the actual image path
-                                      radius: 30.0,
-                                    ),
-                                    SizedBox(height: 8.0),
-                                    Text(
-                                      'Olivia Emma',
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Text(
-                                      'Asst. Manager',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: List.generate(5, (index) {
-                                        return Icon(Icons.star,
-                                            color: Colors.amber, size: 20.0);
-                                      }),
-                                    ),
-                                  ]),
-                                ],
-                              ),
-                              SizedBox(height: 16.0),
-                              Column(
-                                children: [
-                                  Text(
-                                    'Skip The Task is a game-changer! From handyman to legal help, this app connects you with top professionals effortlessly. It\'s become my go-to for all tasks, big or small. Highly recommended for convenience and quality service.',
-                                    style: TextStyle(color: Colors.white),
-                                  ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
-                                      Icon(Icons.arrow_back_ios,
-                                          color: Colors.white,
-                                          size: DeviceDimensions.responsiveSize(
-                                                  context) *
-                                              0.04),
-                                      Icon(Icons.arrow_forward_ios,
-                                          color: Colors.white,
-                                          size: DeviceDimensions.responsiveSize(
-                                                  context) *
-                                              0.04),
+                                      Column(children: [
+                                        CircleAvatar(
+                                          backgroundImage: AssetImage(
+                                              'assets/images/olivia.png'), // Replace with the actual image path
+                                          radius: 30.0,
+                                        ),
+                                        SizedBox(height: 8.0),
+                                        Text(
+                                          'Olivia Emma',
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          'Asst. Manager',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: List.generate(5, (index) {
+                                            return Icon(Icons.star,
+                                                color: Colors.amber,
+                                                size: 20.0);
+                                          }),
+                                        ),
+                                      ]),
                                     ],
+                                  ),
+                                  SizedBox(height: 16.0),
+                                  Column(
+                                    children: [
+                                      Text(
+                                        'Skip The Task is a game-changer! From handyman to legal help, this app connects you with top professionals effortlessly. It\'s become my go-to for all tasks, big or small. Highly recommended for convenience and quality service.',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Icon(Icons.arrow_back_ios,
+                                              color: Colors.white,
+                                              size: DeviceDimensions
+                                                      .responsiveSize(context) *
+                                                  0.04),
+                                          Icon(Icons.arrow_forward_ios,
+                                              color: Colors.white,
+                                              size: DeviceDimensions
+                                                      .responsiveSize(context) *
+                                                  0.04),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: List.generate(4, (index) {
+                                      return Image.asset(
+                                        reviewImagePaths[index],
+                                        width: DeviceDimensions.responsiveSize(
+                                                context) *
+                                            0.2,
+                                        height: DeviceDimensions.responsiveSize(
+                                                context) *
+                                            0.2,
+                                      );
+                                    }),
                                   ),
                                 ],
                               ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: List.generate(4, (index) {
-                                  return Image.asset(
-                                    reviewImagePaths[index],
-                                    width: DeviceDimensions.responsiveSize(
-                                            context) *
-                                        0.2,
-                                    height: DeviceDimensions.responsiveSize(
-                                            context) *
-                                        0.2,
-                                  );
-                                }),
-                              ),
-                            ],
+                            ),
                           ),
-                        ),
+                          // SizedBox(height: 16.0),
+                          // SizedBox(height: 16.0),
+                        ],
                       ),
-                      // SizedBox(height: 16.0),
-                      // SizedBox(height: 16.0),
-                    ],
+                    ),
                   ),
-                ),
+                  Positioned(
+                    top: 0,
+                    left: -6,
+                    child: Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  'assets/images/testimonial.png',
+                                ),
+                                fit: BoxFit.contain)),
+                        width: DeviceDimensions.screenWidth(context) * 0.6,
+                        height: DeviceDimensions.screenHeight(context) * 0.2),
+                  ),
+                ],
               ),
 
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),

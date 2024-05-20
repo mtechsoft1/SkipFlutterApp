@@ -552,6 +552,47 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                     0.75,
                                 height: DeviceDimensions.screenHeight(context) *
                                     0.12,
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Image.asset(
+                                                'assets/images/phone.png'),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text('Call Us',
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                        fontFamily:
+                                                            'Roboto-Medium',
+                                                        fontSize: DeviceDimensions
+                                                                .responsiveSize(
+                                                                    context) *
+                                                            0.05)),
+                                                Text(
+                                                    'Mobile +5623 - 080 - 59632'),
+                                                Text(
+                                                    'Hotline +1234 - 853 - 365'),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ]),
                               ),
                             ),
                             Positioned(
@@ -566,6 +607,45 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                     0.75,
                                 height: DeviceDimensions.screenHeight(context) *
                                     0.12,
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Image.asset(
+                                                'assets/images/email.png'),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text('Email',
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                        fontFamily:
+                                                            'Roboto-Medium',
+                                                        fontSize: DeviceDimensions
+                                                                .responsiveSize(
+                                                                    context) *
+                                                            0.05)),
+                                                Text('skipthetask@open.com'),
+                                                Text('info@example.com'),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ]),
                               ),
                             ),
                             Positioned(
@@ -580,6 +660,58 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                     0.75,
                                 height: DeviceDimensions.screenHeight(context) *
                                     0.12,
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Image.asset(
+                                                'assets/images/location_icon.png'),
+                                          ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 10.0),
+                                                child: Text('Location',
+                                                    textAlign: TextAlign.left,
+                                                    style: TextStyle(
+                                                        fontFamily:
+                                                            'Roboto-Medium',
+                                                        fontSize: DeviceDimensions
+                                                                .responsiveSize(
+                                                                    context) *
+                                                            0.05)),
+                                              ),
+                                              SizedBox(
+                                                width: DeviceDimensions
+                                                        .screenWidth(context) *
+                                                    0.6,
+                                                child: const Padding(
+                                                  padding: EdgeInsets.all(8.0),
+                                                  child: Text(
+                                                    'Dhaka 102, utl 1216, road 45 stert linehouse street',
+                                                  ),
+                                                ),
+                                              ),
+                                              // Text(
+                                              //     'Hotline +1234 - 853 - 365'),
+                                            ],
+                                          )
+                                        ],
+                                      )
+                                    ]),
                               ),
                             ),
                           ],
@@ -593,14 +725,243 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
 
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Color.fromARGB(255, 92, 35, 105),
-                  ),
-                  width: DeviceDimensions.screenWidth(context),
-                  height: DeviceDimensions.screenHeight(context) * 0.12,
-                ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Color.fromARGB(255, 92, 35, 105),
+                    ),
+                    width: DeviceDimensions.screenWidth(context),
+                    height: DeviceDimensions.screenHeight(context) * 0.20,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                              'Revitalize Your Area with Our Dedicated Experts',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Roboto-Medium',
+                                  fontSize:
+                                      DeviceDimensions.responsiveSize(context) *
+                                          0.06,
+                                  color: Colors.white)),
+                          SizedBox(
+                            width: DeviceDimensions.screenWidth(context) * 0.9,
+                            child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color.fromARGB(
+                                        255, 146, 108, 155)),
+                                child: Text('Book An Appointment',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: 'Roboto-Medium',
+                                      fontSize: DeviceDimensions.responsiveSize(
+                                              context) *
+                                          0.04,
+                                    ))),
+                          )
+                        ])),
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
+
+                Stack(
+                  children: [
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 146, 108, 155),
+                        ),
+                        width: DeviceDimensions.screenWidth(context),
+                        height: DeviceDimensions.screenHeight(context) * 0.1,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                        height: DeviceDimensions.screenHeight(context) * 0.02),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/thunderimagevector.png'),
+                            fit: BoxFit.contain,
+                            colorFilter: ColorFilter.mode(
+                              Colors.white.withOpacity(
+                                  0.005), // Adjust opacity as needed
+                              BlendMode.darken, // Choose desired BlendMode
+                            ),
+                          )),
+                      width: DeviceDimensions.screenWidth(context),
+                      height: DeviceDimensions.screenHeight(context) * 0.6,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [],
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.white.withOpacity(0.5),
+                      ),
+                      width: DeviceDimensions.screenWidth(context),
+                      height: DeviceDimensions.screenHeight(context) * 0.6,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.02,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Text(
+                                "Don't Hesitate To Reach Out To Us Today!",
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  fontFamily: 'Roboto-Medium',
+                                  fontSize:
+                                      DeviceDimensions.responsiveSize(context) *
+                                          0.06,
+                                )),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20.0, vertical: 8),
+                            child: Text(
+                              'Name',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12.0,
+                            ),
+                            child: SizedBox(
+                              height:
+                                  DeviceDimensions.screenHeight(context) * 0.05,
+                              width:
+                                  DeviceDimensions.screenWidth(context) * 0.9,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(50)),
+                                  ),
+                                  labelText: 'Enter Name ...',
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20.0, vertical: 8),
+                            child: Text(
+                              'Phone / Email',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12.0,
+                            ),
+                            child: SizedBox(
+                              height:
+                                  DeviceDimensions.screenHeight(context) * 0.05,
+                              width:
+                                  DeviceDimensions.screenWidth(context) * 0.9,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(50)),
+                                  ),
+                                  labelText: 'Enter Phone / Email ...',
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20.0, vertical: 8),
+                            child: Text(
+                              'Choose Service',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.001,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12.0,
+                            ),
+                            child: Container(
+                              height:
+                                  DeviceDimensions.screenHeight(context) * 0.05,
+                              width:
+                                  DeviceDimensions.screenWidth(context) * 0.9,
+                              decoration: BoxDecoration(
+                                color: Colors.transparent,
+                                borderRadius: BorderRadius.circular(50),
+                                border: Border.all(),
+                              ),
+                              child: Center(
+                                child: DropdownButton<String>(
+                                  value:
+                                      'Choose service', // Initially selected value
+                                  onChanged: (String? newValue) {
+                                    // Handle dropdown value change
+                                  },
+                                  items: <String>[
+                                    'Choose service',
+                                    'none',
+                                    'cleaning'
+                                  ] // Dropdown items
+                                      .map<DropdownMenuItem<String>>(
+                                          (String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.001,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        const Color.fromARGB(255, 92, 35, 105)),
+                                child: Text('Submit',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto-Medium'))),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

@@ -198,6 +198,13 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                               DeviceDimensions.screenHeight(context) * 0.02),
 
                       //meet our taskers
+                      Container(
+                          width: DeviceDimensions.screenWidth(context) * 0.9,
+                          height: DeviceDimensions.screenHeight(context) * 0.3,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/imageaboutus.png')))),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
