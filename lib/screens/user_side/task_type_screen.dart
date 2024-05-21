@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/tasker_form_screen_one.dart';
+import 'package:task_rabbit/screens/user_side/tasker_form_screen_one.dart';
 import 'package:task_rabbit/widgets/items_widget.dart';
 
 class TaskTypeScreen extends StatefulWidget {

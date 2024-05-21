@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
+import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';

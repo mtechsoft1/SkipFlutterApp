@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
+import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
+import 'package:task_rabbit/widgets/bottom_popUp.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
 import 'package:task_rabbit/widgets/our_services_widget.dart';
@@ -12,16 +13,15 @@ import 'package:task_rabbit/widgets/popular_projects_widget.dart';
 import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
 import 'package:task_rabbit/widgets/tasker_widget.dart';
 
-class InstantRequestPickTaskerScreen extends StatefulWidget {
-  const InstantRequestPickTaskerScreen({super.key});
+class InstantRequestScreenTwo extends StatefulWidget {
+  const InstantRequestScreenTwo({super.key});
 
   @override
-  State<InstantRequestPickTaskerScreen> createState() =>
-      _InstantRequestPickTaskerScreenState();
+  State<InstantRequestScreenTwo> createState() =>
+      _InstantRequestScreenTwoState();
 }
 
-class _InstantRequestPickTaskerScreenState
-    extends State<InstantRequestPickTaskerScreen> {
+class _InstantRequestScreenTwoState extends State<InstantRequestScreenTwo> {
   @override
   Widget build(BuildContext context) {
     bool isWeb(BuildContext context) =>
@@ -261,115 +261,92 @@ class _InstantRequestPickTaskerScreenState
                         ),
                       ],
                     )),
+
+                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
                 Container(
-                  //color: Colors.amber,
-                  width: DeviceDimensions.screenWidth(context) * 0.9,
-                  //height: DeviceDimensions.screenHeight(context) * 0.9,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                          height:
-                              DeviceDimensions.screenHeight(context) * 0.02),
-
-                      //meet our taskers
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text('Top Taskers',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    fontFamily: 'Roboto-Medium',
-                                    fontSize: DeviceDimensions.responsiveSize(
-                                            context) *
-                                        0.05)),
-                          ),
-                          SizedBox(
-                            width: DeviceDimensions.screenWidth(context) * 0.3,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //       builder: (context) =>
-                                //           TaskerFormTwoScreen()),
-                                // );
-                                // print('press');
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color.fromARGB(
-                                    255,
-                                    92,
-                                    35,
-                                    105), // Set the background color of the button
-                                // Set the text color
+                    width: DeviceDimensions.screenWidth(context),
+                    color: Color.fromARGB(255, 239, 233, 240),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.02),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12.0,
                               ),
-                              child: const Text(
-                                'View All',
-                                style: TextStyle(color: Colors.white),
+                              child: SizedBox(
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.05,
+                                width:
+                                    DeviceDimensions.screenWidth(context) * 0.8,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(50)),
+                                    ),
+                                    labelText: 'enter pick point',
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                // ),
-
-                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
-                //team carousel
-                Container(
-                  width: DeviceDimensions.screenWidth(context),
-                  decoration: const BoxDecoration(
-                    //shape: BoxShape.circle,
-                    gradient: RadialGradient(
-                      colors: [
-                        Color.fromARGB(255, 204, 187, 209),
-                        Color.fromARGB(225, 229, 223, 229)
+                          ],
+                        ),
+                        SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.02),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 12.0,
+                              ),
+                              child: SizedBox(
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.05,
+                                width:
+                                    DeviceDimensions.screenWidth(context) * 0.8,
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(50)),
+                                    ),
+                                    labelText: 'where to?',
+                                  ),
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                                onTap: () {
+                                  showModalBottomSheet(
+                                    context: context,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(16),
+                                      ),
+                                    ),
+                                    builder: (BuildContext context) {
+                                      return BottomSheetContent();
+                                    },
+                                  );
+                                },
+                                child: Image.asset('assets/images/plus.png'))
+                          ],
+                        ),
+                        SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.02),
+                        Image.asset('assets/images/map.png', fit: BoxFit.cover),
+                        SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.03),
+                        Container()
                       ],
-                      center: Alignment.topRight,
-                      radius: 10,
-                    ),
-                  ),
-                  child: TeamCarouselWidget(),
-                ),
-                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Text('Taskers',
-                        style: TextStyle(
-                            fontSize:
-                                DeviceDimensions.responsiveSize(context) * 0.06,
-                            fontFamily: 'Roboto-Medium')),
-                  ),
-                ),
-                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
-
-                Container(
-                  width: DeviceDimensions.screenWidth(context) * 0.9,
-                  height: DeviceDimensions.screenHeight(context),
-                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 239, 233, 240),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: ListView.builder(
-                    itemCount: data.length,
-                    itemBuilder: (context, index) {
-                      return ListTasker(
-                        imagePath: data[index][0],
-                        name: data[index][1],
-                        profession: data[index][2],
-                      );
-                    },
-                  ),
-                ),
-
-                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
+                    ))
               ],
             ),
           ),

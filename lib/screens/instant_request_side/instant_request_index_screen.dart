@@ -1,39 +1,26 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
-import 'package:task_rabbit/screens/service_detail_screen.dart';
+import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
+import 'package:task_rabbit/screens/instant_request_side/instant_request_pick_tasker_screen.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
 import 'package:task_rabbit/widgets/our_services_widget.dart';
 //import 'package:task_rabbit/widgets/our_services_grid.dart';
 import 'package:task_rabbit/widgets/popular_projects_widget.dart';
+import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
 
-class OurServicesScreen extends StatefulWidget {
-  const OurServicesScreen({super.key});
+class InstantRequestIndexScreen extends StatefulWidget {
+  const InstantRequestIndexScreen({super.key});
 
   @override
-  State<OurServicesScreen> createState() => _OurServicesScreenState();
+  State<InstantRequestIndexScreen> createState() =>
+      _InstantRequestIndexScreenState();
 }
 
-class _OurServicesScreenState extends State<OurServicesScreen> {
-  final List<String> serviceImages = [
-    'assets/images/handyman.png',
-    'assets/images/cleaning-list.png',
-    'assets/images/hvac.png',
-    'assets/images/plumbing.png',
-    'assets/images/electrical.png',
-    'assets/images/landscaping.png',
-    'assets/images/mover.png',
-    'assets/images/junk_removal.png',
-    'assets/images/barber',
-    'assets/images/mechanic.png',
-    'assets/images/fitness.png',
-    'assets/images/fitness.png',
-
-    // Add more image paths as needed
-  ];
-
+class _InstantRequestIndexScreenState extends State<InstantRequestIndexScreen> {
   @override
   Widget build(BuildContext context) {
     bool isWeb(BuildContext context) =>
@@ -170,7 +157,7 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                               height:
                                   DeviceDimensions.screenHeight(context) * 0.05,
                               child: Center(
-                                child: Text('Our Services',
+                                child: Text('Get Tasker',
                                     style: TextStyle(
                                         fontFamily: 'Roboto-Medium',
                                         color: Colors.white,
@@ -185,143 +172,145 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                         )
                       ],
                     )),
-                //icon container
-                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.03),
 
+                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.03),
+                //top image
+
+                //body
+                Container(
+                    width: DeviceDimensions.screenWidth(context) * 0.9,
+                    height: DeviceDimensions.screenHeight(context) * 0.2,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Text(
+                                'Filter',
+                                style: TextStyle(
+                                    fontFamily: 'Roboto-Medium',
+                                    fontSize: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.05),
+                              ),
+                              SizedBox(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.03,
+                              ),
+                              Image.asset('assets/images/filter_icon.png'),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text('Task',
+                              style: TextStyle(
+                                  fontFamily: 'Roboto-Medium',
+                                  fontSize:
+                                      DeviceDimensions.responsiveSize(context) *
+                                          0.04)),
+                        ),
+                        Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height:
+                                  DeviceDimensions.screenHeight(context) * 0.05,
+                              width:
+                                  DeviceDimensions.screenWidth(context) * 0.8,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(50),
+                                border: Border.all(),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10.0),
+                                child: DropdownButton<String>(
+                                  value: 'HVAC',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ), // Initially selected value
+                                  onChanged: (String? newValue) {
+                                    // Handle dropdown value change
+                                  },
+                                  items: <String>[
+                                    'HVAC',
+                                    'Cleaning',
+                                    'Mounting',
+                                    'Moving',
+                                  ] // Dropdown items
+                                      .map<DropdownMenuItem<String>>(
+                                          (String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )),
                 Container(
                   //color: Colors.amber,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   //height: DeviceDimensions.screenHeight(context) * 0.9,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                            "When it comes to our services we've got you covered",
-                            style: TextStyle(
-                                fontFamily: 'Roboto-Medium',
-                                fontSize:
-                                    DeviceDimensions.responsiveSize(context) *
-                                        0.05)),
-                      ),
-                      //SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
-                      Table(
+                      SizedBox(
+                          height:
+                              DeviceDimensions.screenHeight(context) * 0.02),
+
+                      //meet our taskers
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          TableRow(
-                            children: [
-                              OurServicesWidget(
-                                imagePath: 'assets/images/handyman.png',
-                                headingText: 'Handyman',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const ServiceDetailScreen()),
-                                  );
-                                  print('service detail screen ');
-                                },
-                              ),
-                              OurServicesWidget(
-                                imagePath: 'assets/images/cleaning-list.png',
-                                headingText: 'Cleaning',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Top Taskers',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    fontFamily: 'Roboto-Medium',
+                                    fontSize: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.05)),
                           ),
-                          TableRow(
-                            children: [
-                              OurServicesWidget(
-                                imagePath: 'assets/images/hvac.png',
-                                headingText: 'HVAC (Heating & Air Condition)',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
+                          SizedBox(
+                            width: DeviceDimensions.screenWidth(context) * 0.3,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          InstantRequestPickTaskerScreen()),
+                                );
+                                print('press');
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(
+                                    255,
+                                    92,
+                                    35,
+                                    105), // Set the background color of the button
+                                // Set the text color
                               ),
-                              OurServicesWidget(
-                                imagePath: 'assets/images/plumbing.png',
-                                headingText: 'Plumbing',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
+                              child: const Text(
+                                'View All',
+                                style: TextStyle(color: Colors.white),
                               ),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              OurServicesWidget(
-                                imagePath: 'assets/images/electrical.png',
-                                headingText: 'Electrical',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                              OurServicesWidget(
-                                imagePath: 'assets/images/landscaping.png',
-                                headingText: 'Landscaping',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              OurServicesWidget(
-                                imagePath: 'assets/images/mover.png',
-                                headingText: 'Mover',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                              OurServicesWidget(
-                                imagePath: 'assets/images/junk_removal.png',
-                                headingText: 'Junk Removal',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              OurServicesWidget(
-                                imagePath: 'assets/images/barber.png',
-                                headingText: 'Barber',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                              OurServicesWidget(
-                                imagePath: 'assets/images/mechanic.png',
-                                headingText: 'Mechanic (Automotive Service)',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              OurServicesWidget(
-                                imagePath: 'assets/images/fitness.png',
-                                headingText: 'Fitness And Wellness',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                              OurServicesWidget(
-                                imagePath: 'assets/images/fitness.png',
-                                headingText: 'Fitness And Wellness',
-                                detailText:
-                                    'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
-                                onPressed: () {},
-                              ),
-                            ],
+                            ),
                           ),
                         ],
                       ),
@@ -331,7 +320,22 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                 // ),
 
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
-                //become a provider
+                //team carousel
+                Container(
+                    width: DeviceDimensions.screenWidth(context),
+                    decoration: const BoxDecoration(
+                      //shape: BoxShape.circle,
+                      gradient: RadialGradient(
+                        colors: [
+                          Color.fromARGB(255, 204, 187, 209),
+                          Color.fromARGB(225, 229, 223, 229)
+                        ],
+                        center: Alignment.topRight,
+                        radius: 10,
+                      ),
+                    ),
+                    child: TeamCarouselWidget()),
+                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               ],
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/location_service/location_helper.dart';
-import 'package:task_rabbit/screens/home_screen.dart';
+import 'package:task_rabbit/screens/user_side/home_screen.dart';
 
 class New extends StatefulWidget {
   const New({super.key});

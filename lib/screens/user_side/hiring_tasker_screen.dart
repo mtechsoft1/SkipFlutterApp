@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/task_type_screen.dart';
+import 'package:task_rabbit/screens/user_side/task_type_screen.dart';
 
 class HiringTaskerScreen extends StatefulWidget {
   const HiringTaskerScreen({super.key});

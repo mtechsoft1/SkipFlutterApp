@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
-import 'package:task_rabbit/screens/instant_request_pick_tasker_screen.dart';
+import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
@@ -11,16 +10,18 @@ import 'package:task_rabbit/widgets/our_services_widget.dart';
 //import 'package:task_rabbit/widgets/our_services_grid.dart';
 import 'package:task_rabbit/widgets/popular_projects_widget.dart';
 import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
+import 'package:task_rabbit/widgets/tasker_widget.dart';
 
-class InstantRequestIndexScreen extends StatefulWidget {
-  const InstantRequestIndexScreen({super.key});
+class InstantRequestPickTaskerScreen extends StatefulWidget {
+  const InstantRequestPickTaskerScreen({super.key});
 
   @override
-  State<InstantRequestIndexScreen> createState() =>
-      _InstantRequestIndexScreenState();
+  State<InstantRequestPickTaskerScreen> createState() =>
+      _InstantRequestPickTaskerScreenState();
 }
 
-class _InstantRequestIndexScreenState extends State<InstantRequestIndexScreen> {
+class _InstantRequestPickTaskerScreenState
+    extends State<InstantRequestPickTaskerScreen> {
   @override
   Widget build(BuildContext context) {
     bool isWeb(BuildContext context) =>
@@ -290,13 +291,13 @@ class _InstantRequestIndexScreenState extends State<InstantRequestIndexScreen> {
                             width: DeviceDimensions.screenWidth(context) * 0.3,
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          InstantRequestPickTaskerScreen()),
-                                );
-                                print('press');
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(
+                                //       builder: (context) =>
+                                //           TaskerFormTwoScreen()),
+                                // );
+                                // print('press');
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color.fromARGB(
@@ -322,19 +323,52 @@ class _InstantRequestIndexScreenState extends State<InstantRequestIndexScreen> {
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
                 //team carousel
                 Container(
-                    width: DeviceDimensions.screenWidth(context),
-                    decoration: const BoxDecoration(
-                      //shape: BoxShape.circle,
-                      gradient: RadialGradient(
-                        colors: [
-                          Color.fromARGB(255, 204, 187, 209),
-                          Color.fromARGB(225, 229, 223, 229)
-                        ],
-                        center: Alignment.topRight,
-                        radius: 10,
-                      ),
+                  width: DeviceDimensions.screenWidth(context),
+                  decoration: const BoxDecoration(
+                    //shape: BoxShape.circle,
+                    gradient: RadialGradient(
+                      colors: [
+                        Color.fromARGB(255, 204, 187, 209),
+                        Color.fromARGB(225, 229, 223, 229)
+                      ],
+                      center: Alignment.topRight,
+                      radius: 10,
                     ),
-                    child: TeamCarouselWidget()),
+                  ),
+                  child: TeamCarouselWidget(),
+                ),
+                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Text('Taskers',
+                        style: TextStyle(
+                            fontSize:
+                                DeviceDimensions.responsiveSize(context) * 0.06,
+                            fontFamily: 'Roboto-Medium')),
+                  ),
+                ),
+                SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
+
+                Container(
+                  width: DeviceDimensions.screenWidth(context) * 0.9,
+                  height: DeviceDimensions.screenHeight(context),
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 239, 233, 240),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: ListView.builder(
+                    itemCount: data.length,
+                    itemBuilder: (context, index) {
+                      return ListTasker(
+                        imagePath: data[index][0],
+                        name: data[index][1],
+                        profession: data[index][2],
+                      );
+                    },
+                  ),
+                ),
+
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               ],
             ),

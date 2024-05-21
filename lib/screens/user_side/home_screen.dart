@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/hiring_tasker_screen.dart';
-import 'package:task_rabbit/screens/instant_request_index_screen.dart';
-import 'package:task_rabbit/screens/instant_request_main.dart';
+import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
+import 'package:task_rabbit/screens/instant_request_side/instant_request_index_screen.dart';
+import 'package:task_rabbit/screens/instant_request_side/instant_request_main.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
