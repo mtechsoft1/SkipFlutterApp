@@ -49,7 +49,7 @@ Widget buildLeftDrawer(BuildContext context) {
                     }).toList(),
                   ),
                   Spacer(), // Flexible space to push the toggle button to the right
-                  ThemeToggle(),
+                  // ThemeToggle(),
                 ],
               ),
             ),

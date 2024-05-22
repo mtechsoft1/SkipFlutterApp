@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:task_rabbit/screens/user_side/new.dart';
-import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
 
 void main() {
   runApp(const MyApp());
