@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_rabbit/responsive/device_dimensions.dart';
+import 'package:task_rabbit/screens/user_side/about_us_screen.dart';
+import 'package:task_rabbit/screens/user_side/contact_us_screen.dart';
 import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
 import 'package:task_rabbit/screens/instant_request_side/instant_request_index_screen.dart';
 import 'package:task_rabbit/screens/instant_request_side/instant_request_main.dart';
+import 'package:task_rabbit/screens/user_side/our_services_screen.dart';
 import 'package:task_rabbit/widgets/about_us_widget.dart';
+import 'package:task_rabbit/widgets/app_bar.dart';
 import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
 import 'package:task_rabbit/widgets/left_side_drawer.dart';
 import 'package:task_rabbit/widgets/popular_projects_widget.dart';
@@ -74,237 +78,473 @@ class _HomeScreenState extends State<HomeScreen> {
     bool isMobile(BuildContext context) =>
         MediaQuery.of(context).size.width < 600;
 
-    // double screenWidth = MediaQuery.of(context).size.width;
-    // double screenHeight = MediaQuery.of(context).size.height;
-    // double responsiveSize = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+        //appBar: CustomAppBar(),
         drawer: buildLeftDrawer(context),
+        //      drawer: Drawer(
+        //   width: DeviceDimensions.screenWidth(context) * 0.6,
+        //   child: Stack(
+        //     children: [
+        //       Column(
+        //         children: [
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: Align(
+        //               alignment: Alignment.topRight,
+        //               child: Positioned(
+        //                 top: 0,
+        //                 right: 0,
+        //                 child: IconButton(
+        //                   icon: Icon(Icons.close),
+        //                   onPressed: () {
+        //                     Navigator.pop(context); // Close the drawer
+        //                   },
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           Padding(
+        //             padding: const EdgeInsets.symmetric(horizontal: 14.0),
+        //             child: Row(
+        //               mainAxisAlignment: MainAxisAlignment.start,
+        //               children: <Widget>[
+        //                 Icon(Icons.language),
+        //                 SizedBox(width: 8), // Space between icon and text
+        //                 //Text('EN'),
+        //                 //SizedBox(width: 8), // Space between text and dropdown
+        //                 DropdownButton<String>(
+        //                   value: 'EN', // Initially selected value
+        //                   onChanged: (String? newValue) {
+        //                     // Handle dropdown value change
+        //                   },
+        //                   items: <String>['EN', 'SP', 'FR'] // Dropdown items
+        //                       .map<DropdownMenuItem<String>>((String value) {
+        //                     return DropdownMenuItem<String>(
+        //                       value: value,
+        //                       child: Text(value),
+        //                     );
+        //                   }).toList(),
+        //                 ),
+        //                 // Flexible space to push the toggle button to the right
+        //                 // ThemeToggle(),
+        //               ],
+        //             ),
+        //           ),
+        //           //home
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: GestureDetector(
+        //               onTap: () {
+        //                 Navigator.push(
+        //                   context,
+        //                   MaterialPageRoute(
+        //                     builder: (context) => HomeScreen(),
+        //                   ),
+        //                 );
+        //               },
+        //               child: Text(
+        //                 'Home',
+        //                 style: TextStyle(
+        //                   fontFamily: 'Roboto-Bold',
+        //                   fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           //our services
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: GestureDetector(
+        //               onTap: () {
+        //                 Navigator.push(
+        //                   context,
+        //                   MaterialPageRoute(
+        //                     builder: (context) => OurServicesScreen(),
+        //                   ),
+        //                 );
+        //               },
+        //               child: Text(
+        //                 'Our Services',
+        //                 style: TextStyle(
+        //                   fontFamily: 'Roboto-Bold',
+        //                   fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           //privacy policy
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: GestureDetector(
+        //               onTap: () {
+        //                 // Navigator.push(
+        //                 //   context,
+        //                 //   MaterialPageRoute(
+        //                 //     builder: (context) => OurServicesScreen(),
+        //                 //   ),
+        //                 // );
+        //               },
+        //               child: Text(
+        //                 'Privacy Policy',
+        //                 style: TextStyle(
+        //                   fontFamily: 'Roboto-Bold',
+        //                   fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           //about us
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: GestureDetector(
+        //               onTap: () {
+        //                 Navigator.push(
+        //                   context,
+        //                   MaterialPageRoute(
+        //                     builder: (context) => AboutUsScreen(),
+        //                   ),
+        //                 );
+        //               },
+        //               child: Text(
+        //                 'About Us',
+        //                 style: TextStyle(
+        //                   fontFamily: 'Roboto-Bold',
+        //                   fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           //settings
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: GestureDetector(
+        //               onTap: () {
+        //                 // Navigator.push(
+        //                 //   context,
+        //                 //   MaterialPageRoute(
+        //                 //     builder: (context) => OurServicesScreen(),
+        //                 //   ),
+        //                 // );
+        //               },
+        //               child: Text(
+        //                 'Settings',
+        //                 style: TextStyle(
+        //                   fontFamily: 'Roboto-Bold',
+        //                   fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+        //           //logout
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: GestureDetector(
+        //               onTap: () {
+        //                 // Navigator.push(
+        //                 //   context,
+        //                 //   MaterialPageRoute(
+        //                 //     builder: (context) => OurServicesScreen(),
+        //                 //   ),
+        //                 // );
+        //               },
+        //               child: Text(
+        //                 'Log Out',
+        //                 style: TextStyle(
+        //                   fontFamily: 'Roboto-Bold',
+        //                   fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+        //                 ),
+        //               ),
+        //             ),
+        //           ),
+
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: SizedBox(
+        //               width: DeviceDimensions.screenWidth(context) * 0.5,
+        //               child: ElevatedButton(
+        //                 onPressed: () {
+        //                   Navigator.push(
+        //                     context,
+        //                     MaterialPageRoute(
+        //                       builder: (context) => ContactUsScreen(),
+        //                     ),
+        //                   );
+        //                 },
+        //                 style: ElevatedButton.styleFrom(
+        //                   backgroundColor:
+        //                       Color.fromARGB(255, 125, 79, 135), // Background color
+        //                 ),
+        //                 child:
+        //                     Text('Contact Us', style: TextStyle(color: Colors.white)),
+        //               ),
+        //             ),
+        //           ),
+
+        //           Padding(
+        //             padding: const EdgeInsets.all(8.0),
+        //             child: SizedBox(
+        //               width: DeviceDimensions.screenWidth(context) * 0.5,
+        //               child: ElevatedButton(
+        //                 onPressed: () {
+        //                   // Do something
+        //                 },
+        //                 style: ElevatedButton.styleFrom(
+        //                   backgroundColor:
+        //                       Color.fromARGB(255, 125, 79, 135), // Background color
+        //                 ),
+        //                 child: Text('Become a Provider',
+        //                     style: TextStyle(color: Colors.white)),
+        //               ),
+        //             ),
+        //           ),
+        //         ],
+        //       ),
+
+        //       // //bottom image
+        //       Positioned(
+        //         left: 0,
+        //         bottom: 0,
+        //         child: Align(
+        //           alignment: Alignment.bottomRight,
+        //           child: Image.asset(
+        //             'assets/images/provider.jpeg', // Replace with your image path
+        //             width: DeviceDimensions.screenWidth(context) * 0.7,
+        //             //height: 100,
+        //             fit: BoxFit.fitWidth,
+        //           ),
+        //         ),
+        //       )
+        //     ],
+        //   ),
+        // ),
 
         body: SingleChildScrollView(
           child: Column(
             children: [
+              CustomAppBar(),
               //header container
-              Container(
-                  // height: DeviceDimensions.screenHeight(context) * 0.25,
-                  width: DeviceDimensions.screenWidth(context),
-                  //color: Colors.amber,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                    image: AssetImage('assets/images/background-image.png'),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                      Color.fromARGB(1, 92, 35, 105)
-                          .withOpacity(0.4), // Adjust opacity as needed
-                      BlendMode.darken, // Choose desired BlendMode
-                    ),
-                  )),
-                  child: Stack(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                              height: DeviceDimensions.screenHeight(context) *
-                                  0.03),
-                          SizedBox(
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.05,
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 16.0),
-                              child: Container(
-                                //color: Colors.white.withOpacity(0.2),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    color: Colors.white.withOpacity(0.2)),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    // Menu bar
-                                    SizedBox(
-                                      child: Builder(
-                                          builder: (BuildContext context) {
-                                        return IconButton(
-                                          icon: const Icon(
-                                            Icons.menu,
-                                            color: Colors.white,
-                                          ),
-                                          onPressed: () {
-                                            Scaffold.of(context).openDrawer();
-                                          },
-                                        );
-                                      }),
-                                    ),
-                                    SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.1),
-                                    // Logo
-                                    Center(
-                                      child: Image.asset(
-                                        'assets/images/skip-the-task-logo.jpeg',
-                                        //height: 40.0, // Adjust as needed
-                                      ),
-                                    ),
-                                    Spacer(),
-                                    // Profile icon button
-                                    Row(
-                                      children: [
-                                        IconButton(
-                                          icon: Icon(
-                                            Icons.phone,
-                                            color: Colors.white,
-                                            size:
-                                                DeviceDimensions.responsiveSize(
-                                                        context) *
-                                                    0.05,
-                                          ),
-                                          onPressed: () {
-                                            // Handle profile button press
-                                          },
-                                        ),
-                                        IconButton(
-                                          icon: Icon(
-                                            Icons.notifications,
-                                            color: Colors.white,
-                                            size:
-                                                DeviceDimensions.responsiveSize(
-                                                        context) *
-                                                    0.05,
-                                          ),
-                                          onPressed: () {
-                                            // Handle profile button press
-                                          },
-                                        ),
-                                        // IconButton(
-                                        //   icon: Icon(
-                                        //     Icons.person,
-                                        //     color: Colors.white,
-                                        //     size: responsiveSize * 0.04,
-                                        //   ),
-                                        //   onPressed: () {
-                                        //     // Handle profile button press
-                                        //   },
-                                        // ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                              height: DeviceDimensions.screenHeight(context) *
-                                  0.005),
-                          SizedBox(
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.05,
-                            child: Center(
-                              child: Text('Largest Booking\nService Platform',
-                                  style: TextStyle(
-                                      fontFamily: 'Roboto-Medium',
-                                      color: Colors.white,
-                                      fontSize: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.04)),
-                            ),
-                          ),
-                          //SizedBox(height: screenHeight * 0.001),
-                          SizedBox(
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.1,
-                              child: Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: Row(children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: SizedBox(
-                                      width: DeviceDimensions.screenWidth(
-                                              context) *
-                                          0.5,
-                                      child: TextField(
-                                        decoration: InputDecoration(
-                                            hintText:
-                                                'What do you need help with?',
-                                            hintStyle: TextStyle(
-                                                fontSize:
-                                                    DeviceDimensions.responsiveSize(
-                                                            context) *
-                                                        0.035),
-                                            filled: true,
-                                            fillColor: Colors.white,
-                                            contentPadding:
-                                                const EdgeInsets.symmetric(
-                                              vertical: 6.0,
-                                              horizontal: 16.0,
-                                            ),
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(20.0),
-                                              borderSide: BorderSide.none,
-                                            ),
-                                            suffixIcon: Container(
-                                                decoration: BoxDecoration(
-                                                    color: Color.fromARGB(
-                                                        255, 92, 35, 105),
-                                                    borderRadius: BorderRadius.only(
-                                                        topRight:
-                                                            Radius.circular(20),
-                                                        bottomRight:
-                                                            Radius.circular(
-                                                                20))),
-                                                padding:
-                                                    const EdgeInsets.all(8.0),
-                                                child: Icon(Icons.search,
-                                                    color: Colors.white))),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                      padding: EdgeInsets.all(8),
-                                      child: SizedBox(
-                                          width: DeviceDimensions.screenWidth(
-                                                  context) *
-                                              0.35,
-                                          child: ElevatedButton(
-                                              style: ButtonStyle(
-                                                backgroundColor:
-                                                    MaterialStateProperty.all<
-                                                            Color>(
-                                                        Color.fromARGB(
-                                                            255,
-                                                            148,
-                                                            108,
-                                                            155)), // Set the background color here
-                                              ),
-                                              onPressed: () {
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        //InstantRequestIndexScreen(),
-                                                        InstantRequestMainScreen(),
-                                                  ),
-                                                );
-                                              },
-                                              child: Text(
-                                                'Instant Request',
-                                                style: TextStyle(
-                                                    fontSize: DeviceDimensions
-                                                            .responsiveSize(
-                                                                context) *
-                                                        0.025,
-                                                    color: Colors.white),
-                                                maxLines:
-                                                    1, // Ensure text wraps in one line
-                                                overflow: TextOverflow.ellipsis,
-                                              ))))
-                                ]),
-                              ))
-                        ],
-                      )
-                    ],
-                  )),
+              // Container(
+              //     // height: DeviceDimensions.screenHeight(context) * 0.25,
+              //     width: DeviceDimensions.screenWidth(context),
+              //     //color: Colors.amber,
+              //     decoration: BoxDecoration(
+              //         image: DecorationImage(
+              //       image: AssetImage('assets/images/background-image.png'),
+              //       fit: BoxFit.cover,
+              //       colorFilter: ColorFilter.mode(
+              //         Color.fromARGB(1, 92, 35, 105)
+              //             .withOpacity(0.4), // Adjust opacity as needed
+              //         BlendMode.darken, // Choose desired BlendMode
+              //       ),
+              //     )),
+              //     child: Stack(
+              //       children: [
+              //         Column(
+              //           children: [
+              //             SizedBox(
+              //                 height: DeviceDimensions.screenHeight(context) *
+              //                     0.03),
+              //             SizedBox(
+              //               height:
+              //                   DeviceDimensions.screenHeight(context) * 0.05,
+              //               child: Padding(
+              //                 padding: EdgeInsets.symmetric(horizontal: 16.0),
+              //                 child: Container(
+              //                   //color: Colors.white.withOpacity(0.2),
+              //                   decoration: BoxDecoration(
+              //                       borderRadius: BorderRadius.circular(8),
+              //                       color: Colors.white.withOpacity(0.2)),
+              //                   child: Row(
+              //                     mainAxisAlignment:
+              //                         MainAxisAlignment.spaceEvenly,
+              //                     children: [
+              //                       // Menu bar
+              //                       SizedBox(
+              //                         child: Builder(
+              //                             builder: (BuildContext context) {
+              //                           return IconButton(
+              //                             icon: const Icon(
+              //                               Icons.menu,
+              //                               color: Colors.white,
+              //                             ),
+              //                             onPressed: () {
+              //                               // Scaffold.of(context).openDrawer();
+              //                             },
+              //                           );
+              //                         }),
+              //                       ),
+              //                       SizedBox(
+              //                           width: DeviceDimensions.screenWidth(
+              //                                   context) *
+              //                               0.1),
+              //                       // Logo
+              //                       Center(
+              //                         child: Image.asset(
+              //                           'assets/images/skip-the-task-logo.jpeg',
+              //                           //height: 40.0, // Adjust as needed
+              //                         ),
+              //                       ),
+              //                       Spacer(),
+              //                       // Profile icon button
+              //                       Row(
+              //                         children: [
+              //                           IconButton(
+              //                             icon: Icon(
+              //                               Icons.phone,
+              //                               color: Colors.white,
+              //                               size:
+              //                                   DeviceDimensions.responsiveSize(
+              //                                           context) *
+              //                                       0.05,
+              //                             ),
+              //                             onPressed: () {
+              //                               // Handle profile button press
+              //                             },
+              //                           ),
+              //                           IconButton(
+              //                             icon: Icon(
+              //                               Icons.notifications,
+              //                               color: Colors.white,
+              //                               size:
+              //                                   DeviceDimensions.responsiveSize(
+              //                                           context) *
+              //                                       0.05,
+              //                             ),
+              //                             onPressed: () {
+              //                               // Handle profile button press
+              //                             },
+              //                           ),
+              //                           // IconButton(
+              //                           //   icon: Icon(
+              //                           //     Icons.person,
+              //                           //     color: Colors.white,
+              //                           //     size: responsiveSize * 0.04,
+              //                           //   ),
+              //                           //   onPressed: () {
+              //                           //     // Handle profile button press
+              //                           //   },
+              //                           // ),
+              //                         ],
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ),
+              //               ),
+              //             ),
+              //             SizedBox(
+              //                 height: DeviceDimensions.screenHeight(context) *
+              //                     0.005),
+              //             SizedBox(
+              //               height:
+              //                   DeviceDimensions.screenHeight(context) * 0.05,
+              //               child: Center(
+              //                 child: Text('Largest Booking\nService Platform',
+              //                     style: TextStyle(
+              //                         fontFamily: 'Roboto-Medium',
+              //                         color: Colors.white,
+              //                         fontSize: DeviceDimensions.responsiveSize(
+              //                                 context) *
+              //                             0.04)),
+              //               ),
+              //             ),
+              //             //SizedBox(height: screenHeight * 0.001),
+              //             SizedBox(
+              //                 height:
+              //                     DeviceDimensions.screenHeight(context) * 0.1,
+              //                 child: Padding(
+              //                   padding: const EdgeInsets.all(10.0),
+              //                   child: Row(children: [
+              //                     Padding(
+              //                       padding: const EdgeInsets.all(8.0),
+              //                       child: SizedBox(
+              //                         width: DeviceDimensions.screenWidth(
+              //                                 context) *
+              //                             0.5,
+              //                         child: TextField(
+              //                           decoration: InputDecoration(
+              //                               hintText:
+              //                                   'What do you need help with?',
+              //                               hintStyle: TextStyle(
+              //                                   fontSize:
+              //                                       DeviceDimensions.responsiveSize(
+              //                                               context) *
+              //                                           0.035),
+              //                               filled: true,
+              //                               fillColor: Colors.white,
+              //                               contentPadding:
+              //                                   const EdgeInsets.symmetric(
+              //                                 vertical: 6.0,
+              //                                 horizontal: 16.0,
+              //                               ),
+              //                               border: OutlineInputBorder(
+              //                                 borderRadius:
+              //                                     BorderRadius.circular(20.0),
+              //                                 borderSide: BorderSide.none,
+              //                               ),
+              //                               suffixIcon: Container(
+              //                                   decoration: BoxDecoration(
+              //                                       color: Color.fromARGB(
+              //                                           255, 92, 35, 105),
+              //                                       borderRadius: BorderRadius.only(
+              //                                           topRight:
+              //                                               Radius.circular(20),
+              //                                           bottomRight:
+              //                                               Radius.circular(
+              //                                                   20))),
+              //                                   padding:
+              //                                       const EdgeInsets.all(8.0),
+              //                                   child: Icon(Icons.search,
+              //                                       color: Colors.white))),
+              //                         ),
+              //                       ),
+              //                     ),
+              //                     Padding(
+              //                         padding: EdgeInsets.all(8),
+              //                         child: SizedBox(
+              //                             width: DeviceDimensions.screenWidth(
+              //                                     context) *
+              //                                 0.35,
+              //                             child: ElevatedButton(
+              //                                 style: ButtonStyle(
+              //                                   backgroundColor:
+              //                                       MaterialStateProperty.all<
+              //                                               Color>(
+              //                                           Color.fromARGB(
+              //                                               255,
+              //                                               148,
+              //                                               108,
+              //                                               155)), // Set the background color here
+              //                                 ),
+              //                                 onPressed: () {
+              //                                   Navigator.push(
+              //                                     context,
+              //                                     MaterialPageRoute(
+              //                                       builder: (context) =>
+              //                                           //InstantRequestIndexScreen(),
+              //                                           InstantRequestMainScreen(),
+              //                                     ),
+              //                                   );
+              //                                 },
+              //                                 child: Text(
+              //                                   'Instant Request',
+              //                                   style: TextStyle(
+              //                                       fontSize: DeviceDimensions
+              //                                               .responsiveSize(
+              //                                                   context) *
+              //                                           0.025,
+              //                                       color: Colors.white),
+              //                                   maxLines:
+              //                                       1, // Ensure text wraps in one line
+              //                                   overflow: TextOverflow.ellipsis,
+              //                                 ))))
+              //                   ]),
+              //                 ))
+              //           ],
+              //         )
+              //       ],
+              //     )),
+
               //icon container
               Container(
                 height: DeviceDimensions.screenHeight(context) * 0.1,
@@ -1055,29 +1295,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        // bottomNavigationBar: Container(
-        //   width: DeviceDimensions.screenWidth(context),
-        //   // height: screenHeight * 0.075,
-        //   decoration: const BoxDecoration(
-        //     //borderRadius: BorderRadius.only(topLeft: Radius.circular(radius)),
-        //     color: Color.fromARGB(255, 146, 108, 153),
-        //   ),
-        //   child: SafeArea(
-        //     child: Padding(
-        //       padding:
-        //           const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
-        //       child: Row(
-        //         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //         children: [
-        //           BottomNavBarItem(0, 'assets/images/home_nav_icon.png'),
-        //           BottomNavBarItem(1, 'assets/images/service_nav_icon.png'),
-        //           BottomNavBarItem(2, 'assets/images/activity_nav_icon.png'),
-        //           BottomNavBarItem(3, 'assets/images/account_nav_icon.png'),
-        //         ],
-        //       ),
-        //     ),
-        //   ),
-        // ),
         bottomNavigationBar: buildBottomNavBar(context),
       ),
     );
