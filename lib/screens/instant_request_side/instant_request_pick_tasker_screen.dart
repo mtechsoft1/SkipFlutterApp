@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/user_side/hiring_tasker_screen.dart';
-import 'package:task_rabbit/widgets/about_us_widget.dart';
-import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
-import 'package:task_rabbit/widgets/left_side_drawer.dart';
-import 'package:task_rabbit/widgets/our_services_widget.dart';
-//import 'package:task_rabbit/widgets/our_services_grid.dart';
-import 'package:task_rabbit/widgets/popular_projects_widget.dart';
-import 'package:task_rabbit/widgets/build_team_carousel_widget.dart';
-import 'package:task_rabbit/widgets/tasker_widget.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/screens/user_side/hiring_tasker_screen.dart';
+import 'package:Skip_The_Task/widgets/about_us_widget.dart';
+import 'package:Skip_The_Task/widgets/build_bottom_nav_bar.dart';
+import 'package:Skip_The_Task/widgets/left_side_drawer.dart';
+import 'package:Skip_The_Task/widgets/our_services_widget.dart';
+//import 'package:Skip_The_Task/widgets/our_services_grid.dart';
+import 'package:Skip_The_Task/widgets/popular_projects_widget.dart';
+import 'package:Skip_The_Task/widgets/build_team_carousel_widget.dart';
+import 'package:Skip_The_Task/widgets/tasker_widget.dart';
 
 class InstantRequestPickTaskerScreen extends StatefulWidget {
   const InstantRequestPickTaskerScreen({super.key});

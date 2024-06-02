@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
 
 class TaskerFormTwoScreen extends StatefulWidget {
   const TaskerFormTwoScreen({super.key});

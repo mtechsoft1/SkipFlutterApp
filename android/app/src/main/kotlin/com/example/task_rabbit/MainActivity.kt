@@ -1,4 +1,4 @@
-package com.example.task_rabbit
+package com.example.SkipTheTask
 
 import io.flutter.embedding.android.FlutterActivity
 

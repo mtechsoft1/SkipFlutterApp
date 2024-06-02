@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:task_rabbit/screens/user_side/new.dart';
+import 'package:Skip_The_Task/screens/user_side/new.dart';
 
 void main() {
+  // Enable logging
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/widgets/bottom_nav_bar_items.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/widgets/bottom_nav_bar_items.dart';
 //import 'package:your_project_name/device_dimensions.dart'; // Import the utility class
 
 Widget buildBottomNavBar(BuildContext context) {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/user_side/about_us_screen.dart';
-import 'package:task_rabbit/screens/user_side/contact_us_screen.dart';
-import 'package:task_rabbit/screens/user_side/home_screen.dart';
-import 'package:task_rabbit/screens/user_side/our_services_screen.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/screens/user_side/about_us_screen.dart';
+import 'package:Skip_The_Task/screens/user_side/contact_us_screen.dart';
+import 'package:Skip_The_Task/screens/user_side/home_screen.dart';
+import 'package:Skip_The_Task/screens/user_side/our_services_screen.dart';
 
 Widget buildLeftDrawer(BuildContext context) {
   return Drawer(
@@ -51,7 +51,7 @@ Widget buildLeftDrawer(BuildContext context) {
         ),
         //home
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: GestureDetector(
             onTap: () {
               Navigator.push(
@@ -65,14 +65,14 @@ Widget buildLeftDrawer(BuildContext context) {
               'Home',
               style: TextStyle(
                 fontFamily: 'Roboto-Bold',
-                fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+                fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
               ),
             ),
           ),
         ),
         //our services
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: GestureDetector(
             onTap: () {
               Navigator.push(
@@ -86,14 +86,14 @@ Widget buildLeftDrawer(BuildContext context) {
               'Our Services',
               style: TextStyle(
                 fontFamily: 'Roboto-Bold',
-                fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+                fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
               ),
             ),
           ),
         ),
         //privacy policy
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: GestureDetector(
             onTap: () {
               // Navigator.push(
@@ -107,35 +107,35 @@ Widget buildLeftDrawer(BuildContext context) {
               'Privacy Policy',
               style: TextStyle(
                 fontFamily: 'Roboto-Bold',
-                fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+                fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
               ),
             ),
           ),
         ),
         //about us
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AboutUsScreen(),
-                ),
-              );
-            },
-            child: Text(
-              'About Us',
-              style: TextStyle(
-                fontFamily: 'Roboto-Bold',
-                fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
-              ),
-            ),
-          ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.all(12.0),
+        //   child: GestureDetector(
+        //     onTap: () {
+        //       Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) => AboutUsScreen(),
+        //         ),
+        //       );
+        //     },
+        //     child: Text(
+        //       'About Us',
+        //       style: TextStyle(
+        //         fontFamily: 'Roboto-Bold',
+        //         fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
+        //       ),
+        //     ),
+        //   ),
+        // ),
         //settings
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: GestureDetector(
             onTap: () {
               // Navigator.push(
@@ -149,14 +149,14 @@ Widget buildLeftDrawer(BuildContext context) {
               'Settings',
               style: TextStyle(
                 fontFamily: 'Roboto-Bold',
-                fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+                fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
               ),
             ),
           ),
         ),
         //logout
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: GestureDetector(
             onTap: () {
               // Navigator.push(
@@ -170,36 +170,36 @@ Widget buildLeftDrawer(BuildContext context) {
               'Log Out',
               style: TextStyle(
                 fontFamily: 'Roboto-Bold',
-                fontSize: DeviceDimensions.responsiveSize(context) * 0.04,
+                fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
               ),
             ),
           ),
         ),
 
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SizedBox(
-            width: DeviceDimensions.screenWidth(context) * 0.5,
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ContactUsScreen(),
-                  ),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor:
-                    Color.fromARGB(255, 125, 79, 135), // Background color
-              ),
-              child: Text('Contact Us', style: TextStyle(color: Colors.white)),
-            ),
-          ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.all(12.0),
+        //   child: SizedBox(
+        //     width: DeviceDimensions.screenWidth(context) * 0.5,
+        //     child: ElevatedButton(
+        //       onPressed: () {
+        //         Navigator.push(
+        //           context,
+        //           MaterialPageRoute(
+        //             builder: (context) => ContactUsScreen(),
+        //           ),
+        //         );
+        //       },
+        //       style: ElevatedButton.styleFrom(
+        //         backgroundColor:
+        //             Color.fromARGB(255, 125, 79, 135), // Background color
+        //       ),
+        //       child: Text('Contact Us', style: TextStyle(color: Colors.white)),
+        //     ),
+        //   ),
+        // ),
 
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: SizedBox(
             width: DeviceDimensions.screenWidth(context) * 0.5,
             child: ElevatedButton(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
 
 class TeamCarouselWidget extends StatefulWidget {
   @override

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/instant_request_side/instant_request_any_tasker.dart';
-import 'package:task_rabbit/screens/instant_request_side/instant_request_index_screen.dart';
-import 'package:task_rabbit/widgets/build_bottom_nav_bar.dart';
-import 'package:task_rabbit/widgets/left_side_drawer.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/screens/instant_request_side/instant_request_any_tasker.dart';
+import 'package:Skip_The_Task/screens/instant_request_side/instant_request_index_screen.dart';
+import 'package:Skip_The_Task/widgets/build_bottom_nav_bar.dart';
+import 'package:Skip_The_Task/widgets/left_side_drawer.dart';
 
 class InstantRequestMainScreen extends StatefulWidget {
   const InstantRequestMainScreen({super.key});

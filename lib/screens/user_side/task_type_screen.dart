@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/user_side/tasker_form_screen_one.dart';
-import 'package:task_rabbit/widgets/items_widget.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/screens/user_side/tasker_form_screen_one.dart';
+import 'package:Skip_The_Task/widgets/items_widget.dart';
 
 class TaskTypeScreen extends StatefulWidget {
   const TaskTypeScreen({super.key});

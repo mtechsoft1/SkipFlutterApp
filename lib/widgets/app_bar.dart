@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
-import 'package:task_rabbit/screens/instant_request_side/instant_request_main.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/screens/instant_request_side/instant_request_main.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override

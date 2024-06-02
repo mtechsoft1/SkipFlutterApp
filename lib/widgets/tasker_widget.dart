@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_rabbit/responsive/device_dimensions.dart';
+import 'package:Skip_The_Task/responsive/device_dimensions.dart';
 
 // Define your data as a 2D list
 final List<List<String>> data = [
