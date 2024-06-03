@@ -537,34 +537,28 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Padding(
+                            Container(
                               padding: const EdgeInsets.all(8.0),
-                              child: Flexible(
-                                child: Text(
-                                    'Contact Us Today - Let Us Assist You In your work!',
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto-Medium',
-                                        fontSize:
-                                            DeviceDimensions.responsiveSize(
-                                                    context) *
-                                                0.06)),
-                              ),
+                              child: Text(
+                                  'Contact Us Today - Let Us Assist You In your work!',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontFamily: 'Roboto-Medium',
+                                      fontSize: DeviceDimensions.responsiveSize(
+                                              context) *
+                                          0.06)),
                             ),
-                            Padding(
+                            Container(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 8.0),
-                              child: Flexible(
-                                child: Text(
-                                    'Trust us to handle your problem, so you can focus on what matters most.',
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        fontFamily: 'Roboto-Medium',
-                                        fontSize:
-                                            DeviceDimensions.responsiveSize(
-                                                    context) *
-                                                0.035)),
-                              ),
+                              child: Text(
+                                  'Trust us to handle your problem, so you can focus on what matters most.',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontFamily: 'Roboto-Medium',
+                                      fontSize: DeviceDimensions.responsiveSize(
+                                              context) *
+                                          0.035)),
                             ),
                           ],
                         ),

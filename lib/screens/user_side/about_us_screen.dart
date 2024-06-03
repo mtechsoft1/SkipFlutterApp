@@ -240,18 +240,16 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                           0.06),
                             ),
                           ),
-                          Padding(
+                          Container(
                             padding: const EdgeInsets.all(8.0),
-                            child: Flexible(
-                              child: Text(
-                                  'With a team of highly trained and certified electricians, we are dedicated to delivering top-notch electrical solutions for both residential and commercial clients. Our technicians are not only experts in their field, but they are also passionate about ensuring your electrical systems are safe, efficient, and up to code.',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      fontFamily: 'Roboto',
-                                      fontSize: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.04)),
-                            ),
+                            child: Text(
+                                'With a team of highly trained and certified electricians, we are dedicated to delivering top-notch electrical solutions for both residential and commercial clients. Our technicians are not only experts in their field, but they are also passionate about ensuring your electrical systems are safe, efficient, and up to code.',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                    fontFamily: 'Roboto',
+                                    fontSize: DeviceDimensions.responsiveSize(
+                                            context) *
+                                        0.04)),
                           ),
                         ],
                       ),

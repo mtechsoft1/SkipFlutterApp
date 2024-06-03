@@ -258,77 +258,83 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                           ),
                         ],
                       ),
-                      Stack(
-                        children: [
-                          Container(
-                            width: DeviceDimensions.screenWidth(context) * 0.9,
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.5,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/tasker-blue.png'), // Replace with your image path
-                                fit: BoxFit.cover, // Adjust the fit as needed
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            top: 150,
-                            left: 40,
-                            child: Container(
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
                               width:
-                                  DeviceDimensions.screenWidth(context) * 0.7,
+                                  DeviceDimensions.screenWidth(context) * 0.9,
                               height:
-                                  DeviceDimensions.screenHeight(context) * 0.25,
-                              //color: Colors.amber,
+                                  DeviceDimensions.screenHeight(context) * 0.5,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 29, 15, 44)
-                                    .withOpacity(0.6),
                                 borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Have any Qustion?\nContact Us Now',
-                                    //textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Roboto-Medium',
-                                      fontSize: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.05,
-                                    ),
-                                  ),
-                                  Text(
-                                    'Call :012548325',
-                                    //textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Roboto-Medium',
-                                      fontSize: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.07,
-                                    ),
-                                  ),
-                                  Text(
-                                    'skipthetask@open.com',
-                                    //textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Roboto-Medium',
-                                      fontSize: DeviceDimensions.responsiveSize(
-                                              context) *
-                                          0.05,
-                                    ),
-                                  ),
-                                ],
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/tasker-blue.png'), // Replace with your image path
+                                  fit: BoxFit.cover, // Adjust the fit as needed
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                            Positioned(
+                              top: 150,
+                              left: 40,
+                              child: Container(
+                                width:
+                                    DeviceDimensions.screenWidth(context) * 0.7,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.25,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 29, 15, 44)
+                                      .withOpacity(0.6),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Have any Qustion?\nContact Us Now',
+                                      //textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto-Medium',
+                                        fontSize:
+                                            DeviceDimensions.responsiveSize(
+                                                    context) *
+                                                0.05,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Call :012548325',
+                                      //textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto-Medium',
+                                        fontSize:
+                                            DeviceDimensions.responsiveSize(
+                                                    context) *
+                                                0.07,
+                                      ),
+                                    ),
+                                    Text(
+                                      'skipthetask@open.com',
+                                      //textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Roboto-Medium',
+                                        fontSize:
+                                            DeviceDimensions.responsiveSize(
+                                                    context) *
+                                                0.05,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height:
@@ -386,90 +392,89 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                     DeviceDimensions.responsiveSize(context) *
                                         0.04)),
                       ),
-                      Padding(
+                      Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Flexible(
-                          child: Text(
-                              'Repair is a specialized field that focuses on fixing and restoring objects or systems back to their original working condition It involves diagnosing issues replacing faulty parts and ensuring optimal functionality. Repair services are maintaining the longevity of various products equipment and infrastructure',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.035)),
-                        ),
+                        child: Text(
+                            'Repair is a specialized field that focuses on fixing and restoring objects or systems back to their original working condition It involves diagnosing issues replacing faulty parts and ensuring optimal functionality. Repair services are maintaining the longevity of various products equipment and infrastructure',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.035)),
                       ),
                       SizedBox(
                           height:
                               DeviceDimensions.screenHeight(context) * 0.02),
-                      Stack(
-                        children: [
-                          Container(
-                            width: DeviceDimensions.screenWidth(context) * 0.9,
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.16,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Color.fromARGB(255, 239, 233, 240)),
-                          ),
-                          Positioned(
-                            top: 10,
-                            left: 10,
-                            child: Container(
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
                               width:
-                                  DeviceDimensions.screenWidth(context) * 0.25,
+                                  DeviceDimensions.screenWidth(context) * 0.9,
                               height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
+                                  DeviceDimensions.screenHeight(context) * 0.16,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 92, 35, 105),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/bestquality.png',
-                                    fit: BoxFit.contain,
-                                  )
-                                ],
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Color.fromARGB(255, 239, 233, 240)),
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.25,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 92, 35, 105),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/bestquality.png',
+                                      fit: BoxFit.contain,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            top: 25,
-                            left: 85,
-                            child: Container(
-                              width:
-                                  DeviceDimensions.screenWidth(context) * 0.65,
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('Best Quality',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.04,
-                                        )),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Flexible(
+                            Positioned(
+                              top: 25,
+                              left: 85,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.65,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('Best Quality',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontFamily: 'Roboto-Medium',
+                                            fontSize:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.04,
+                                          )),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8.0),
                                       child: Text(
                                           'Repair is a specialized field that focuses on fixing and restoring object',
                                           textAlign: TextAlign.left,
@@ -482,84 +487,85 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                                     0.035,
                                           )),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height:
                               DeviceDimensions.screenHeight(context) * 0.02),
-                      Stack(
-                        children: [
-                          Container(
-                            width: DeviceDimensions.screenWidth(context) * 0.9,
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.16,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Color.fromARGB(255, 239, 233, 240)),
-                          ),
-                          Positioned(
-                            top: 10,
-                            left: 10,
-                            child: Container(
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
                               width:
-                                  DeviceDimensions.screenWidth(context) * 0.25,
+                                  DeviceDimensions.screenWidth(context) * 0.9,
                               height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
+                                  DeviceDimensions.screenHeight(context) * 0.16,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 92, 35, 105),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/team.png',
-                                    fit: BoxFit.contain,
-                                  )
-                                ],
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Color.fromARGB(255, 239, 233, 240)),
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.25,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 92, 35, 105),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/team.png',
+                                      fit: BoxFit.contain,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            top: 25,
-                            left: 85,
-                            child: Container(
-                              width:
-                                  DeviceDimensions.screenWidth(context) * 0.65,
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('Teamwork',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.04,
-                                        )),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Flexible(
+                            Positioned(
+                              top: 25,
+                              left: 85,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.65,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('Teamwork',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontFamily: 'Roboto-Medium',
+                                            fontSize:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.04,
+                                          )),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8.0),
                                       child: Text(
                                           'We list tow cars from all major car manufacturers including BMW, Land Rover, Jaguar, Honda and Volvo! etc.',
                                           textAlign: TextAlign.left,
@@ -572,84 +578,85 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                                     0.035,
                                           )),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height:
                               DeviceDimensions.screenHeight(context) * 0.02),
-                      Stack(
-                        children: [
-                          Container(
-                            width: DeviceDimensions.screenWidth(context) * 0.9,
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.16,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Color.fromARGB(255, 239, 233, 240)),
-                          ),
-                          Positioned(
-                            top: 10,
-                            left: 10,
-                            child: Container(
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
                               width:
-                                  DeviceDimensions.screenWidth(context) * 0.25,
+                                  DeviceDimensions.screenWidth(context) * 0.9,
                               height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
+                                  DeviceDimensions.screenHeight(context) * 0.16,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 92, 35, 105),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/security.png',
-                                    fit: BoxFit.contain,
-                                  )
-                                ],
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Color.fromARGB(255, 239, 233, 240)),
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.25,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 92, 35, 105),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/security.png',
+                                      fit: BoxFit.contain,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            top: 25,
-                            left: 85,
-                            child: Container(
-                              width:
-                                  DeviceDimensions.screenWidth(context) * 0.65,
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('Security',
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.04,
-                                        )),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Flexible(
+                            Positioned(
+                              top: 25,
+                              left: 85,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.65,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('Security',
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontFamily: 'Roboto-Medium',
+                                            fontSize:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.04,
+                                          )),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8.0),
                                       child: Text(
                                           'Our affiliates are committed to providing you with the best selection of mechanics at affordable prices.',
                                           textAlign: TextAlign.left,
@@ -662,85 +669,86 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                                     0.035,
                                           )),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height:
                               DeviceDimensions.screenHeight(context) * 0.02),
-                      Stack(
-                        children: [
-                          Container(
-                            width: DeviceDimensions.screenWidth(context) * 0.9,
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.16,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Color.fromARGB(255, 239, 233, 240)),
-                          ),
-                          Positioned(
-                            top: 10,
-                            left: 10,
-                            child: Container(
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
                               width:
-                                  DeviceDimensions.screenWidth(context) * 0.25,
+                                  DeviceDimensions.screenWidth(context) * 0.9,
                               height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
+                                  DeviceDimensions.screenHeight(context) * 0.16,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 92, 35, 105),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    'assets/images/commitment.png',
-                                    fit: BoxFit.contain,
-                                  )
-                                ],
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Color.fromARGB(255, 239, 233, 240)),
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.25,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 92, 35, 105),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/commitment.png',
+                                      fit: BoxFit.contain,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            top: 25,
-                            left: 85,
-                            child: Container(
-                              width:
-                                  DeviceDimensions.screenWidth(context) * 0.65,
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.12,
-                              //color: Colors.amber,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text('Commitment',
-                                        maxLines: 2,
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontFamily: 'Roboto-Medium',
-                                          fontSize:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.04,
-                                        )),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Flexible(
+                            Positioned(
+                              top: 25,
+                              left: 85,
+                              child: Container(
+                                width: DeviceDimensions.screenWidth(context) *
+                                    0.65,
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.12,
+                                //color: Colors.amber,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text('Commitment',
+                                          maxLines: 2,
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                            fontFamily: 'Roboto-Medium',
+                                            fontSize:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.04,
+                                          )),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8.0),
                                       child: Text(
                                           'Our industry leading motor dealers are here to help you find the most suitable mechanic for you.',
                                           textAlign: TextAlign.left,
@@ -753,12 +761,12 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                                     0.035,
                                           )),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height:
@@ -773,59 +781,62 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                     DeviceDimensions.responsiveSize(context) *
                                         0.04)),
                       ),
-                      Padding(
+                      Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Flexible(
-                          child: Text(
-                              'Repair is a specialized field that focuses on fixing and restoring objects or systems back to their original working condition It involves diagnosing issues replacing faulty parts and ensuring optimal functionality. Repair services are maintaining the longevity of various products equipment and infrastructure',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.035)),
-                        ),
+                        child: Text(
+                            'Repair is a specialized field that focuses on fixing and restoring objects or systems back to their original working condition It involves diagnosing issues replacing faulty parts and ensuring optimal functionality. Repair services are maintaining the longevity of various products equipment and infrastructure',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.035)),
                       ),
                       SizedBox(
                           height:
                               DeviceDimensions.screenHeight(context) * 0.02),
-                      Stack(
-                        children: [
-                          Container(
-                            width: DeviceDimensions.screenWidth(context) * 0.9,
-                            height:
-                                DeviceDimensions.screenHeight(context) * 0.3,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              image: DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/tasker-light.png'), // Replace with your image path
-                                fit: BoxFit.cover,
-                                colorFilter: ColorFilter.mode(
-                                  Colors.black.withOpacity(0.3),
-                                  BlendMode.darken,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            top: 80,
-                            left: 130,
-                            child: Container(
-                              width: DeviceDimensions.responsiveSize(context) *
-                                  0.2,
-                              height: DeviceDimensions.responsiveSize(context) *
-                                  0.2,
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
+                              width:
+                                  DeviceDimensions.screenWidth(context) * 0.9,
+                              height:
+                                  DeviceDimensions.screenHeight(context) * 0.3,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
-                                color: Color.fromARGB(255, 239, 233, 240),
                                 image: DecorationImage(
-                                  image: AssetImage('assets/images/tri.png'),
+                                  image: AssetImage(
+                                      'assets/images/tasker-light.png'), // Replace with your image path
+                                  fit: BoxFit.cover,
+                                  colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.3),
+                                    BlendMode.darken,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                            Positioned(
+                              top: 80,
+                              left: 130,
+                              child: Container(
+                                width:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.2,
+                                height:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.2,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  color: Color.fromARGB(255, 239, 233, 240),
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/images/tri.png'),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height:
@@ -840,18 +851,16 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                     DeviceDimensions.responsiveSize(context) *
                                         0.04)),
                       ),
-                      Padding(
+                      Container(
                         padding: const EdgeInsets.all(8.0),
-                        child: Flexible(
-                          child: Text(
-                              'Repair is a specialized field that focuses on fixing and restoring objects or systems back to their original working condition It involves diagnosing issues replacing faulty parts and ensuring optimal functionality. Repair services are maintaining the longevity of various products equipment and infrastructure',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize:
-                                      DeviceDimensions.responsiveSize(context) *
-                                          0.035)),
-                        ),
+                        child: Text(
+                            'Repair is a specialized field that focuses on fixing and restoring objects or systems back to their original working condition It involves diagnosing issues replacing faulty parts and ensuring optimal functionality. Repair services are maintaining the longevity of various products equipment and infrastructure',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontFamily: 'Roboto',
+                                fontSize:
+                                    DeviceDimensions.responsiveSize(context) *
+                                        0.035)),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

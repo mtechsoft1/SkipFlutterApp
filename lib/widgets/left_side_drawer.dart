@@ -113,26 +113,26 @@ Widget buildLeftDrawer(BuildContext context) {
           ),
         ),
         //about us
-        // Padding(
-        //   padding: const EdgeInsets.all(12.0),
-        //   child: GestureDetector(
-        //     onTap: () {
-        //       Navigator.push(
-        //         context,
-        //         MaterialPageRoute(
-        //           builder: (context) => AboutUsScreen(),
-        //         ),
-        //       );
-        //     },
-        //     child: Text(
-        //       'About Us',
-        //       style: TextStyle(
-        //         fontFamily: 'Roboto-Bold',
-        //         fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
-        //       ),
-        //     ),
-        //   ),
-        // ),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AboutUsScreen(),
+                ),
+              );
+            },
+            child: Text(
+              'About Us',
+              style: TextStyle(
+                fontFamily: 'Roboto-Bold',
+                fontSize: DeviceDimensions.responsiveSize(context) * 0.045,
+              ),
+            ),
+          ),
+        ),
         //settings
         Padding(
           padding: const EdgeInsets.all(12.0),
@@ -176,27 +176,27 @@ Widget buildLeftDrawer(BuildContext context) {
           ),
         ),
 
-        // Padding(
-        //   padding: const EdgeInsets.all(12.0),
-        //   child: SizedBox(
-        //     width: DeviceDimensions.screenWidth(context) * 0.5,
-        //     child: ElevatedButton(
-        //       onPressed: () {
-        //         Navigator.push(
-        //           context,
-        //           MaterialPageRoute(
-        //             builder: (context) => ContactUsScreen(),
-        //           ),
-        //         );
-        //       },
-        //       style: ElevatedButton.styleFrom(
-        //         backgroundColor:
-        //             Color.fromARGB(255, 125, 79, 135), // Background color
-        //       ),
-        //       child: Text('Contact Us', style: TextStyle(color: Colors.white)),
-        //     ),
-        //   ),
-        // ),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: SizedBox(
+            width: DeviceDimensions.screenWidth(context) * 0.5,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ContactUsScreen(),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor:
+                    Color.fromARGB(255, 125, 79, 135), // Background color
+              ),
+              child: Text('Contact Us', style: TextStyle(color: Colors.white)),
+            ),
+          ),
+        ),
 
         Padding(
           padding: const EdgeInsets.all(12.0),
