@@ -67,7 +67,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                         ),
                       )),
                       child: Stack(
-                        children: <Widget>[
+                        children: [
                           Column(
                             children: [
                               SizedBox(
@@ -118,7 +118,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                                 size: DeviceDimensions
                                                         .responsiveSize(
                                                             context) *
-                                                    0.06,
+                                                    0.05,
                                               ),
                                               onPressed: () {
                                                 Scaffold.of(context)
@@ -128,20 +128,28 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                           }),
                                         ),
                                       ),
-                                      SizedBox(
-                                          width: DeviceDimensions.screenWidth(
-                                                  context) *
-                                              0.1),
+                                      // SizedBox(
+                                      //     width: DeviceDimensions.screenWidth(
+                                      //             context) *
+                                      //         0.005),
                                       // Logo
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(4),
-                                        child: Image.asset(
-                                          'assets/images/skip-the-task-logo.jpeg',
-                                          height: 40.0, // Adjust as needed
+                                      SizedBox(
+                                        width: DeviceDimensions.screenWidth(
+                                                context) *
+                                            0.53,
+                                        child: Center(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            child: Image.asset(
+                                              'assets/images/skip-the-task-logo.jpeg',
+                                              height: 45.0, // Adjust as needed
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       Spacer(),
-                                      // Profile icon button
+                                      // // Profile icon button
                                       Row(
                                         children: [
                                           IconButton(
@@ -201,10 +209,6 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                                   0.05)),
                                 ),
                               ),
-                              SizedBox(
-                                  height:
-                                      DeviceDimensions.screenHeight(context) *
-                                          0.01),
                               //SizedBox(height: screenHeight * 0.001),
                             ],
                           )
@@ -288,7 +292,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 8.0),
                                       child: Text(
-                                        'What do you Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+                                        'Quality services at affordable prices, tailored to your budget',
                                         style: TextStyle(
                                             fontFamily: 'Roboto',
                                             fontSize:
@@ -382,7 +386,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 8.0),
                                       child: Text(
-                                        'What do you Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+                                        'Swift, dependable service you can trust for peace of mind',
                                         style: TextStyle(
                                             fontFamily: 'Roboto',
                                             fontSize:
@@ -476,7 +480,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 8.0),
                                       child: Text(
-                                        'What do you Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+                                        'Instant response, day or night for all your emergency needs.',
                                         style: TextStyle(
                                             fontFamily: 'Roboto',
                                             fontSize:
@@ -552,7 +556,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 8.0),
                               child: Text(
-                                  'Trust us to handle your problem, so you can focus on what matters most.',
+                                  'Begin now and let us expertly handle your task completion!',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       fontFamily: 'Roboto-Medium',
@@ -630,9 +634,9 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                                                       context) *
                                                               0.05)),
                                                   Text(
-                                                      'Mobile +5623 - 080 - 59632'),
-                                                  Text(
-                                                      'Hotline +1234 - 853 - 365'),
+                                                      'Mobile 1 (888) 453 - 6554'),
+                                                  // Text(
+                                                  //     'Hotline +1234 - 853 - 365'),
                                                 ],
                                               ),
                                             )
@@ -688,8 +692,9 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                                                   .responsiveSize(
                                                                       context) *
                                                               0.05)),
-                                                  Text('skipthetask@open.com'),
-                                                  Text('info@example.com'),
+                                                  Text(
+                                                      'support@skipthetask.com'),
+                                                  //Text('info@example.com'),
                                                 ],
                                               ),
                                             )
@@ -756,7 +761,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                                     padding:
                                                         EdgeInsets.all(8.0),
                                                     child: Text(
-                                                      'Dhaka 102, utl 1216, road 45 stert linehouse street',
+                                                      '30 Wall St, 8th Floor, New York, NY 10005, United States',
                                                     ),
                                                   ),
                                                 ),

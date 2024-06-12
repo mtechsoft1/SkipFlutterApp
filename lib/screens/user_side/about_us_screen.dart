@@ -109,7 +109,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                               color: Colors.white,
                                               size: DeviceDimensions
                                                       .responsiveSize(context) *
-                                                  0.06,
+                                                  0.05,
                                             ),
                                             onPressed: () {
                                               Scaffold.of(context).openDrawer();
@@ -118,20 +118,28 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                         }),
                                       ),
                                     ),
-                                    SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.1),
+                                    // SizedBox(
+                                    //     width: DeviceDimensions.screenWidth(
+                                    //             context) *
+                                    //         0.005),
                                     // Logo
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(4),
-                                      child: Image.asset(
-                                        'assets/images/skip-the-task-logo.jpeg',
-                                        height: 40.0, // Adjust as needed
+                                    SizedBox(
+                                      width: DeviceDimensions.screenWidth(
+                                              context) *
+                                          0.53,
+                                      child: Center(
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(4),
+                                          child: Image.asset(
+                                            'assets/images/skip-the-task-logo.jpeg',
+                                            height: 45.0, // Adjust as needed
+                                          ),
+                                        ),
                                       ),
                                     ),
                                     Spacer(),
-                                    // Profile icon button
+                                    // // Profile icon button
                                     Row(
                                       children: [
                                         IconButton(
@@ -192,9 +200,6 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                                                 0.05)),
                               ),
                             ),
-                            SizedBox(
-                                height: DeviceDimensions.screenHeight(context) *
-                                    0.01),
                             //SizedBox(height: screenHeight * 0.001),
                           ],
                         )
@@ -243,7 +248,7 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                           Container(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                                'With a team of highly trained and certified electricians, we are dedicated to delivering top-notch electrical solutions for both residential and commercial clients. Our technicians are not only experts in their field, but they are also passionate about ensuring your electrical systems are safe, efficient, and up to code.',
+                                'Reliable, skilled professionals ready to tackle your to-do list with efficieny, precision and a smile.',
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                     fontFamily: 'Roboto',
@@ -253,275 +258,276 @@ class _AboutUsScreenState extends State<AboutUsScreen> {
                           ),
                         ],
                       ),
-                      SizedBox(
-                          height:
-                              DeviceDimensions.screenHeight(context) * 0.02),
-                      //about us
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 92, 35, 105),
-                            borderRadius: BorderRadius.circular(20)),
-                        height: DeviceDimensions.screenHeight(context) * 0.99,
-                        width: DeviceDimensions.screenWidth(context) * 0.9,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Container(
-                                      width: DeviceDimensions.screenWidth(
-                                              context) *
-                                          0.4,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                          color: Color.fromARGB(255, 221, 73,
-                                              255), // Border color
-                                          width: 2, // Border width
-                                        ),
-                                      ),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(10),
-                                        child: Image.asset(
-                                          'assets/images/about.jpeg',
-                                          width: DeviceDimensions
-                                                  .responsiveSize(context) *
-                                              0.25, // Adjust the width as needed
-                                          height:
-                                              DeviceDimensions.responsiveSize(
-                                                      context) *
-                                                  0.40,
-                                          fit: BoxFit
-                                              .fitWidth, // Adjust the height as needed
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        child: Text(
-                                          'Assembly',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontFamily: 'Roboto-Bold',
-                                            fontSize:
-                                                DeviceDimensions.responsiveSize(
-                                                        context) *
-                                                    0.05,
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.4,
-                                        child: Text(
-                                          "Discover excellence at your fingertips with Skip The Task From skilled handyman to expert cleaners, reliable HVAC technicians, and accomplished lawyers, discover top-notch professionals for every task. Whether it's home improvement, event services, or personal care, our platform seamlessly connects you with trusted experts to get the job done right. Join us today and unlock unparalleled convenience, quality, and peace of mind.",
-                                          style: TextStyle(
-                                              fontSize: DeviceDimensions
-                                                      .responsiveSize(context) *
-                                                  0.028,
-                                              color: Colors.white),
-                                          softWrap: true,
-                                          //maxLines: 10,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                            // SizedBox(
-                            //     height: 10), // Add some vertical space between the rows
-                            Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 8.0),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width:
-                                            20, // Diameter of the circular container
-                                        height: 20,
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color.fromARGB(255, 146, 108,
-                                                155) // Adjust the color as needed
-                                            ),
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.check, // Your icon here
-                                            color: Colors
-                                                .white, // Adjust the icon color as needed
-                                            size:
-                                                15, // Adjust the icon size as needed
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.70,
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(10.0),
-                                          child: Text(
-                                            'Assemble or disassemble furniture items by unboxing, building, and any cleanup.',
-                                            style: TextStyle(
-                                                fontSize: DeviceDimensions
-                                                        .responsiveSize(
-                                                            context) *
-                                                    0.028,
-                                                color: Colors.white),
-                                            softWrap: true,
-                                          ),
-                                        ),
-                                      ),
+                      // SizedBox(
+                      //     height:
+                      //         DeviceDimensions.screenHeight(context) * 0.02),
+                      // //about us
+                      // Container(
+                      //   decoration: BoxDecoration(
+                      //       color: Color.fromARGB(255, 92, 35, 105),
+                      //       borderRadius: BorderRadius.circular(20)),
+                      //   height: DeviceDimensions.screenHeight(context) * 0.99,
+                      //   width: DeviceDimensions.screenWidth(context) * 0.9,
+                      //   child: Column(
+                      //     crossAxisAlignment: CrossAxisAlignment.start,
+                      //     children: [
+                      //       Padding(
+                      //         padding: const EdgeInsets.all(8.0),
+                      //         child: Row(
+                      //           children: [
+                      //             Padding(
+                      //               padding: const EdgeInsets.symmetric(
+                      //                   horizontal: 8.0),
+                      //               child: Container(
+                      //                 width: DeviceDimensions.screenWidth(
+                      //                         context) *
+                      //                     0.4,
+                      //                 decoration: BoxDecoration(
+                      //                   borderRadius: BorderRadius.circular(10),
+                      //                   border: Border.all(
+                      //                     color: Color.fromARGB(255, 221, 73,
+                      //                         255), // Border color
+                      //                     width: 2, // Border width
+                      //                   ),
+                      //                 ),
+                      //                 child: ClipRRect(
+                      //                   borderRadius: BorderRadius.circular(10),
+                      //                   child: Image.asset(
+                      //                     'assets/images/about.jpeg',
+                      //                     width: DeviceDimensions
+                      //                             .responsiveSize(context) *
+                      //                         0.25, // Adjust the width as needed
+                      //                     height:
+                      //                         DeviceDimensions.responsiveSize(
+                      //                                 context) *
+                      //                             0.40,
+                      //                     fit: BoxFit
+                      //                         .fitWidth, // Adjust the height as needed
+                      //                   ),
+                      //                 ),
+                      //               ),
+                      //             ),
+                      //             Column(
+                      //               crossAxisAlignment:
+                      //                   CrossAxisAlignment.start,
+                      //               children: [
+                      //                 Container(
+                      //                   child: Text(
+                      //                     'Assembly',
+                      //                     style: TextStyle(
+                      //                       color: Colors.white,
+                      //                       fontFamily: 'Roboto-Bold',
+                      //                       fontSize:
+                      //                           DeviceDimensions.responsiveSize(
+                      //                                   context) *
+                      //                               0.05,
+                      //                     ),
+                      //                   ),
+                      //                 ),
+                      //                 Container(
+                      //                   width: DeviceDimensions.screenWidth(
+                      //                           context) *
+                      //                       0.4,
+                      //                   child: Text(
+                      //                     "Discover excellence at your fingertips with Skip The Task From skilled handyman to expert cleaners, reliable HVAC technicians, and accomplished lawyers, discover top-notch professionals for every task. Whether it's home improvement, event services, or personal care, our platform seamlessly connects you with trusted experts to get the job done right. Join us today and unlock unparalleled convenience, quality, and peace of mind.",
+                      //                     style: TextStyle(
+                      //                         fontSize: DeviceDimensions
+                      //                                 .responsiveSize(context) *
+                      //                             0.028,
+                      //                         color: Colors.white),
+                      //                     softWrap: true,
+                      //                     //maxLines: 10,
+                      //                   ),
+                      //                 ),
+                      //               ],
+                      //             ),
+                      //           ],
+                      //         ),
+                      //       ),
+                      //       // SizedBox(
+                      //       //     height: 10), // Add some vertical space between the rows
+                      //       Column(
+                      //         children: [
+                      //           Padding(
+                      //             padding: const EdgeInsets.symmetric(
+                      //                 horizontal: 8.0),
+                      //             child: Row(
+                      //               children: [
+                      //                 Container(
+                      //                   width:
+                      //                       20, // Diameter of the circular container
+                      //                   height: 20,
+                      //                   decoration: BoxDecoration(
+                      //                       shape: BoxShape.circle,
+                      //                       color: Color.fromARGB(255, 146, 108,
+                      //                           155) // Adjust the color as needed
+                      //                       ),
+                      //                   child: Center(
+                      //                     child: Icon(
+                      //                       Icons.check, // Your icon here
+                      //                       color: Colors
+                      //                           .white, // Adjust the icon color as needed
+                      //                       size:
+                      //                           15, // Adjust the icon size as needed
+                      //                     ),
+                      //                   ),
+                      //                 ),
+                      //                 SizedBox(
+                      //                   width: DeviceDimensions.screenWidth(
+                      //                           context) *
+                      //                       0.70,
+                      //                   child: Padding(
+                      //                     padding: const EdgeInsets.all(10.0),
+                      //                     child: Text(
+                      //                       'Assemble or disassemble furniture items by unboxing, building, and any cleanup.',
+                      //                       style: TextStyle(
+                      //                           fontSize: DeviceDimensions
+                      //                                   .responsiveSize(
+                      //                                       context) *
+                      //                               0.028,
+                      //                           color: Colors.white),
+                      //                       softWrap: true,
+                      //                     ),
+                      //                   ),
+                      //                 ),
 
-                                      // Now Trending: Curved sofas, computer desks, and sustainable materials.
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10.0),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width:
-                                            20, // Diameter of the circular container
-                                        height: 20,
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color.fromARGB(255, 146, 108,
-                                                155) // Adjust the color as needed
-                                            ),
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.check, // Your icon here
-                                            color: Colors
-                                                .white, // Adjust the icon color as needed
-                                            size:
-                                                15, // Adjust the icon size as needed
-                                          ),
-                                        ),
-                                      ),
+                      //                 // Now Trending: Curved sofas, computer desks, and sustainable materials.
+                      //               ],
+                      //             ),
+                      //           ),
+                      //           Padding(
+                      //             padding: const EdgeInsets.symmetric(
+                      //                 horizontal: 10.0),
+                      //             child: Row(
+                      //               children: [
+                      //                 Container(
+                      //                   width:
+                      //                       20, // Diameter of the circular container
+                      //                   height: 20,
+                      //                   decoration: BoxDecoration(
+                      //                       shape: BoxShape.circle,
+                      //                       color: Color.fromARGB(255, 146, 108,
+                      //                           155) // Adjust the color as needed
+                      //                       ),
+                      //                   child: Center(
+                      //                     child: Icon(
+                      //                       Icons.check, // Your icon here
+                      //                       color: Colors
+                      //                           .white, // Adjust the icon color as needed
+                      //                       size:
+                      //                           15, // Adjust the icon size as needed
+                      //                     ),
+                      //                   ),
+                      //                 ),
 
-                                      SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.70,
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(10.0),
-                                          child: Text(
-                                            'Now Trending: Curved sofas, computer desks, and sustainable materials',
-                                            style: TextStyle(
-                                                fontSize: DeviceDimensions
-                                                        .responsiveSize(
-                                                            context) *
-                                                    0.028,
-                                                color: Colors.white),
-                                            softWrap: true,
-                                          ),
-                                        ),
-                                      ),
+                      //                 SizedBox(
+                      //                   width: DeviceDimensions.screenWidth(
+                      //                           context) *
+                      //                       0.70,
+                      //                   child: Padding(
+                      //                     padding: const EdgeInsets.all(10.0),
+                      //                     child: Text(
+                      //                       'Now Trending: Curved sofas, computer desks, and sustainable materials',
+                      //                       style: TextStyle(
+                      //                           fontSize: DeviceDimensions
+                      //                                   .responsiveSize(
+                      //                                       context) *
+                      //                               0.028,
+                      //                           color: Colors.white),
+                      //                       softWrap: true,
+                      //                     ),
+                      //                   ),
+                      //                 ),
 
-                                      // Now Trending: Curved sofas, computer desks, and sustainable materials.
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            // SizedBox(
-                            //     height:
-                            //         10), // Add some vertical space between the text and container
-                            SizedBox(
-                                width: DeviceDimensions.screenWidth(context) *
-                                    0.35,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                        color: Color.fromARGB(255, 67, 27, 77),
-                                        borderRadius: BorderRadius.circular(8)),
-                                    child: Row(
-                                      children: [
-                                        TextButton(
-                                          onPressed: () {},
-                                          child: Text('Book Now',
-                                              style: TextStyle(
-                                                  color: Colors.white)),
-                                        ),
-                                        Icon(
-                                          Icons
-                                              .arrow_right_alt, // Specify the icon you want to use
-                                          color: Colors.white,
-                                          size: 20,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                )),
-                            Center(
-                              child: Container(
-                                width: DeviceDimensions.screenWidth(context) *
-                                    0.8, // Match the width of the parent
-                                //height: screenHeight * 0.2, // Adjust the height as needed
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(12)),
+                      //                 // Now Trending: Curved sofas, computer desks, and sustainable materials.
+                      //               ],
+                      //             ),
+                      //           ),
+                      //         ],
+                      //       ),
+                      //       // SizedBox(
+                      //       //     height:
+                      //       //         10), // Add some vertical space between the text and container
+                      //       SizedBox(
+                      //           width: DeviceDimensions.screenWidth(context) *
+                      //               0.35,
+                      //           child: Padding(
+                      //             padding: const EdgeInsets.all(8.0),
+                      //             child: Container(
+                      //               decoration: BoxDecoration(
+                      //                   color: Color.fromARGB(255, 67, 27, 77),
+                      //                   borderRadius: BorderRadius.circular(8)),
+                      //               child: Row(
+                      //                 children: [
+                      //                   TextButton(
+                      //                     onPressed: () {},
+                      //                     child: Text('Book Now',
+                      //                         style: TextStyle(
+                      //                             color: Colors.white)),
+                      //                   ),
+                      //                   Icon(
+                      //                     Icons
+                      //                         .arrow_right_alt, // Specify the icon you want to use
+                      //                     color: Colors.white,
+                      //                     size: 20,
+                      //                   ),
+                      //                 ],
+                      //               ),
+                      //             ),
+                      //           )),
+                      //       Center(
+                      //         child: Container(
+                      //           width: DeviceDimensions.screenWidth(context) *
+                      //               0.8, // Match the width of the parent
+                      //           //height: screenHeight * 0.2, // Adjust the height as needed
+                      //           decoration: BoxDecoration(
+                      //               color: Colors.white,
+                      //               borderRadius: BorderRadius.circular(12)),
 
-                                child: Center(
-                                  child: Table(
-                                    children: const [
-                                      TableRow(
-                                        children: [
-                                          AboutUsWidget(
-                                            text1: '200+',
-                                            imagePath:
-                                                'assets/images/clients.png',
-                                            text2: 'Happy Clients',
-                                          ),
-                                          AboutUsWidget(
-                                            text1: '20+',
-                                            imagePath:
-                                                'assets/images/awards.png',
-                                            text2: 'Winning Awards',
-                                          ),
-                                        ],
-                                      ),
-                                      TableRow(
-                                        children: [
-                                          AboutUsWidget(
-                                            text1: '10 K+',
-                                            imagePath:
-                                                'assets/images/projects.png',
-                                            text2: 'Complete Projects',
-                                          ),
-                                          AboutUsWidget(
-                                            text1: '900+',
-                                            imagePath:
-                                                'assets/images/review.png',
-                                            text2: 'Client Reviews',
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      //           child: Center(
+                      //             child: Table(
+                      //               children: const [
+                      //                 TableRow(
+                      //                   children: [
+                      //                     AboutUsWidget(
+                      //                       text1: '200+',
+                      //                       imagePath:
+                      //                           'assets/images/clients.png',
+                      //                       text2: 'Happy Clients',
+                      //                     ),
+                      //                     AboutUsWidget(
+                      //                       text1: '20+',
+                      //                       imagePath:
+                      //                           'assets/images/awards.png',
+                      //                       text2: 'Winning Awards',
+                      //                     ),
+                      //                   ],
+                      //                 ),
+                      //                 TableRow(
+                      //                   children: [
+                      //                     AboutUsWidget(
+                      //                       text1: '10 K+',
+                      //                       imagePath:
+                      //                           'assets/images/projects.png',
+                      //                       text2: 'Complete Projects',
+                      //                     ),
+                      //                     AboutUsWidget(
+                      //                       text1: '900+',
+                      //                       imagePath:
+                      //                           'assets/images/review.png',
+                      //                       text2: 'Client Reviews',
+                      //                     ),
+                      //                   ],
+                      //                 )
+                      //               ],
+                      //             ),
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
+
                       SizedBox(
                           height:
                               DeviceDimensions.screenHeight(context) * 0.02),

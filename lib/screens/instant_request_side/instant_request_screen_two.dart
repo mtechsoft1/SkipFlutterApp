@@ -55,7 +55,7 @@ class _InstantRequestScreenTwoState extends State<InstantRequestScreenTwo> {
               children: [
                 //header container
                 Container(
-                    //height: DeviceDimensions.screenHeight(context) * 0.25,
+                    // height: DeviceDimensions.screenHeight(context) * 0.25,
                     width: DeviceDimensions.screenWidth(context),
                     //color: Colors.amber,
                     decoration: BoxDecoration(
@@ -75,28 +75,47 @@ class _InstantRequestScreenTwoState extends State<InstantRequestScreenTwo> {
                             SizedBox(
                                 height: DeviceDimensions.screenHeight(context) *
                                     0.03),
-                            SizedBox(
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.05,
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                                child: Container(
-                                  //color: Colors.white.withOpacity(0.2),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      color: Colors.white.withOpacity(0.2)),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      // Menu bar
-                                      SizedBox(
+                            Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Container(
+                                height: DeviceDimensions.screenHeight(context) *
+                                    0.065,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    color: Color.fromARGB(255, 204, 187, 209)
+                                        .withOpacity(0.5)),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    // Menu bar
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8.0, vertical: 2),
+                                      child: Container(
+                                        width: DeviceDimensions.responsiveSize(
+                                                context) *
+                                            0.1,
+                                        height: DeviceDimensions.responsiveSize(
+                                                context) *
+                                            0.1,
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color:
+                                              Color.fromARGB(255, 239, 233, 240)
+                                                  .withOpacity(0.6),
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
                                         child: Builder(
                                             builder: (BuildContext context) {
                                           return IconButton(
-                                            icon: const Icon(
+                                            icon: Icon(
                                               Icons.menu,
                                               color: Colors.white,
+                                              size: DeviceDimensions
+                                                      .responsiveSize(context) *
+                                                  0.05,
                                             ),
                                             onPressed: () {
                                               Scaffold.of(context).openDrawer();
@@ -104,68 +123,87 @@ class _InstantRequestScreenTwoState extends State<InstantRequestScreenTwo> {
                                           );
                                         }),
                                       ),
-                                      SizedBox(
-                                          width: DeviceDimensions.screenWidth(
-                                                  context) *
-                                              0.1),
-                                      // Logo
-                                      Center(
-                                        child: Image.asset(
-                                          'assets/images/skip-the-task-logo.jpeg',
-                                          //height: 40.0, // Adjust as needed
+                                    ),
+                                    // SizedBox(
+                                    //     width: DeviceDimensions.screenWidth(
+                                    //             context) *
+                                    //         0.005),
+                                    // Logo
+                                    SizedBox(
+                                      width: DeviceDimensions.screenWidth(
+                                              context) *
+                                          0.53,
+                                      child: Center(
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(4),
+                                          child: Image.asset(
+                                            'assets/images/skip-the-task-logo.jpeg',
+                                            height: 45.0, // Adjust as needed
+                                          ),
                                         ),
                                       ),
-                                      Spacer(),
-                                      // Profile icon button
-                                      Row(
-                                        children: [
-                                          IconButton(
-                                            icon: Icon(
-                                              Icons.phone,
-                                              color: Colors.white,
-                                              size: DeviceDimensions
-                                                      .responsiveSize(context) *
-                                                  0.05,
-                                            ),
-                                            onPressed: () {
-                                              // Handle profile button press
-                                            },
+                                    ),
+                                    Spacer(),
+                                    // // Profile icon button
+                                    Row(
+                                      children: [
+                                        IconButton(
+                                          icon: Icon(
+                                            Icons.phone,
+                                            color: Colors.white,
+                                            size:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.05,
                                           ),
-                                          IconButton(
-                                            icon: Icon(
-                                              Icons.notifications,
-                                              color: Colors.white,
-                                              size: DeviceDimensions
-                                                      .responsiveSize(context) *
-                                                  0.05,
-                                            ),
-                                            onPressed: () {
-                                              // Handle profile button press
-                                            },
+                                          onPressed: () {
+                                            // Handle profile button press
+                                          },
+                                        ),
+                                        IconButton(
+                                          icon: Icon(
+                                            Icons.notifications,
+                                            color: Colors.white,
+                                            size:
+                                                DeviceDimensions.responsiveSize(
+                                                        context) *
+                                                    0.05,
                                           ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                                          onPressed: () {
+                                            // Handle profile button press
+                                          },
+                                        ),
+                                        // IconButton(
+                                        //   icon: Icon(
+                                        //     Icons.person,
+                                        //     color: Colors.white,
+                                        //     size: responsiveSize * 0.04,
+                                        //   ),
+                                        //   onPressed: () {
+                                        //     // Handle profile button press
+                                        //   },
+                                        // ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
                             SizedBox(
                                 height: DeviceDimensions.screenHeight(context) *
-                                    0.005),
-
+                                    0.01),
                             SizedBox(
-                              height:
-                                  DeviceDimensions.screenHeight(context) * 0.05,
                               child: Center(
                                 child: Text('Get Tasker',
                                     style: TextStyle(
                                         fontFamily: 'Roboto-Medium',
+                                        fontWeight: FontWeight.w700,
                                         color: Colors.white,
                                         fontSize:
                                             DeviceDimensions.responsiveSize(
                                                     context) *
-                                                0.06)),
+                                                0.05)),
                               ),
                             ),
                             //SizedBox(height: screenHeight * 0.001),

@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      title: 'Task Rabbit',
+      title: 'Skip The Task',
       debugShowCheckedModeBanner: false,
       home: const New(),
     );

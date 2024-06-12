@@ -34,6 +34,11 @@ class _HomeScreenState extends State<HomeScreen> {
     ['assets/images/drill.png', 'Mounting'],
     ['assets/images/move.png', 'Moving'],
     ['assets/images/cleaning2.png', 'Cleaning'],
+    ['assets/images/doctor.png', 'Doctor'],
+    ['assets/images/law.png', 'Lawyer'],
+    ['assets/images/painting.png', 'Painting'],
+    ['assets/images/nurse.png', 'Nurse'],
+    ['assets/images/tutor.png', 'Tutor'],
     ['assets/images/arrow.png', 'See All'],
     // Add more image paths as needed
   ];
@@ -149,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             size:
                                                 DeviceDimensions.responsiveSize(
                                                         context) *
-                                                    0.06,
+                                                    0.05,
                                           ),
                                           onPressed: () {
                                             Scaffold.of(context).openDrawer();
@@ -158,20 +163,27 @@ class _HomeScreenState extends State<HomeScreen> {
                                       }),
                                     ),
                                   ),
-                                  SizedBox(
-                                      width: DeviceDimensions.screenWidth(
-                                              context) *
-                                          0.1),
+                                  // SizedBox(
+                                  //     width: DeviceDimensions.screenWidth(
+                                  //             context) *
+                                  //         0.005),
                                   // Logo
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(4),
-                                    child: Image.asset(
-                                      'assets/images/skip-the-task-logo.jpeg',
-                                      height: 40.0, // Adjust as needed
+                                  SizedBox(
+                                    width:
+                                        DeviceDimensions.screenWidth(context) *
+                                            0.53,
+                                    child: Center(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(4),
+                                        child: Image.asset(
+                                          'assets/images/skip-the-task-logo.jpeg',
+                                          height: 45.0, // Adjust as needed
+                                        ),
+                                      ),
                                     ),
                                   ),
                                   Spacer(),
-                                  // Profile icon button
+                                  // // Profile icon button
                                   Row(
                                     children: [
                                       IconButton(
@@ -241,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: SizedBox(
                                       width: DeviceDimensions.screenWidth(
                                               context) *
-                                          0.5,
+                                          0.6,
                                       child: TextField(
                                         decoration: InputDecoration(
                                           hintText:
@@ -249,7 +261,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           hintStyle: TextStyle(
                                               fontSize: DeviceDimensions
                                                       .responsiveSize(context) *
-                                                  0.035,
+                                                  0.03,
                                               color: Colors.white),
                                           filled: true,
                                           fillColor:
@@ -289,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       child: SizedBox(
                                           width: DeviceDimensions.screenWidth(
                                                   context) *
-                                              0.35,
+                                              0.25,
                                           child: ElevatedButton(
                                               style: ButtonStyle(
                                                 backgroundColor:
@@ -313,6 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               },
                                               child: Text(
                                                 'Instant Request',
+                                                textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                     fontSize: DeviceDimensions
                                                             .responsiveSize(
@@ -320,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         0.025,
                                                     color: Colors.white),
                                                 maxLines:
-                                                    1, // Ensure text wraps in one line
+                                                    2, // Ensure text wraps in one line
                                                 overflow: TextOverflow.ellipsis,
                                               ))))
                                 ]),
@@ -722,7 +735,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             //height: screenHeight * 0.05,
                             child: Center(
                               child: Text(
-                                  "Become As Provider\n&\nBe Your Own Boss With Skip The Task",
+                                  "Become As Tasker\n&\nBe Your Own Boss With Skip The Task",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: Colors.white,
@@ -740,7 +753,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: ElevatedButton(
                             onPressed: () {},
                             child: Text(
-                              'Become Provider',
+                              'Become A Tasker',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontFamily: 'Roboto-Bold'),
@@ -865,7 +878,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: SizedBox(
                               //height: screenHeight * 0.05,
                               child: Text(
-                            'Who We Work',
+                            'About Us',
                             style: TextStyle(
                                 fontFamily: 'Roboto-Bold',
                                 color: Colors.white,
@@ -879,7 +892,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: SizedBox(
                               //height: screenHeight * 0.05,
                               child: Text(
-                            'We will not take anyone or anything for granted. We are grateful for our people, members, and our greater community as well as for the opportunities we have in front of us.',
+                            'We are a premium service provider, committed to delivering excellence in every task. With a team of dedicated professionals, we streamline your to-do list with precision and reliability, ensuring your satisfaction at every step.',
                             style: TextStyle(
                                 fontFamily: 'Roboto',
                                 color: Colors.white,
@@ -908,7 +921,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: SizedBox(
                               //height: screenHeight * 0.05,
                               child: Text(
-                            'Our team of experienced professionals taskers is committed to providing top-notch services to you.',
+                            'Select us for top-notch service, with trusted pros, background checks and full insurance for peace of mind.',
                             style: TextStyle(
                                 fontFamily: 'Roboto',
                                 color: Colors.white,

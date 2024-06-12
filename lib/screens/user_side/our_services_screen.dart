@@ -1,3 +1,5 @@
+import 'package:Skip_The_Task/screens/instant_request_side/instant_request_index_screen.dart';
+import 'package:Skip_The_Task/screens/instant_request_side/instant_request_main.dart';
 import 'package:flutter/material.dart';
 import 'package:Skip_The_Task/responsive/device_dimensions.dart';
 import 'package:Skip_The_Task/screens/user_side/hiring_tasker_screen.dart';
@@ -127,7 +129,7 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                                               color: Colors.white,
                                               size: DeviceDimensions
                                                       .responsiveSize(context) *
-                                                  0.06,
+                                                  0.05,
                                             ),
                                             onPressed: () {
                                               Scaffold.of(context).openDrawer();
@@ -136,20 +138,28 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                                         }),
                                       ),
                                     ),
-                                    SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.1),
+                                    // SizedBox(
+                                    //     width: DeviceDimensions.screenWidth(
+                                    //             context) *
+                                    //         0.005),
                                     // Logo
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(4),
-                                      child: Image.asset(
-                                        'assets/images/skip-the-task-logo.jpeg',
-                                        height: 40.0, // Adjust as needed
+                                    SizedBox(
+                                      width: DeviceDimensions.screenWidth(
+                                              context) *
+                                          0.53,
+                                      child: Center(
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(4),
+                                          child: Image.asset(
+                                            'assets/images/skip-the-task-logo.jpeg',
+                                            height: 45.0, // Adjust as needed
+                                          ),
+                                        ),
                                       ),
                                     ),
                                     Spacer(),
-                                    // Profile icon button
+                                    // // Profile icon button
                                     Row(
                                       children: [
                                         IconButton(
@@ -210,14 +220,12 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                                                 0.05)),
                               ),
                             ),
-                            SizedBox(
-                                height: DeviceDimensions.screenHeight(context) *
-                                    0.01),
                             //SizedBox(height: screenHeight * 0.001),
                           ],
                         )
                       ],
                     )),
+
                 //icon container
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.1),
 
@@ -250,11 +258,11 @@ class _OurServicesScreenState extends State<OurServicesScreen> {
                                     'Lorem ipsum dolor sit amet consectetur. Tortor sed vel ipsum id amet desi molestie Nonm nhii viverra diam velit elit vivera',
                                 onPressed: () {
                                   Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const ServiceDetailScreen()),
-                                  );
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              //const ServiceDetailScreen()),
+                                              const InstantRequestMainScreen()));
                                   print('service detail screen ');
                                 },
                               ),

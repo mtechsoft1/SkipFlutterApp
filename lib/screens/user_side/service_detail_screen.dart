@@ -123,7 +123,7 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                               color: Colors.white,
                                               size: DeviceDimensions
                                                       .responsiveSize(context) *
-                                                  0.06,
+                                                  0.05,
                                             ),
                                             onPressed: () {
                                               Scaffold.of(context).openDrawer();
@@ -132,20 +132,28 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                         }),
                                       ),
                                     ),
-                                    SizedBox(
-                                        width: DeviceDimensions.screenWidth(
-                                                context) *
-                                            0.1),
+                                    // SizedBox(
+                                    //     width: DeviceDimensions.screenWidth(
+                                    //             context) *
+                                    //         0.005),
                                     // Logo
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(4),
-                                      child: Image.asset(
-                                        'assets/images/skip-the-task-logo.jpeg',
-                                        height: 40.0, // Adjust as needed
+                                    SizedBox(
+                                      width: DeviceDimensions.screenWidth(
+                                              context) *
+                                          0.53,
+                                      child: Center(
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(4),
+                                          child: Image.asset(
+                                            'assets/images/skip-the-task-logo.jpeg',
+                                            height: 45.0, // Adjust as needed
+                                          ),
+                                        ),
                                       ),
                                     ),
                                     Spacer(),
-                                    // Profile icon button
+                                    // // Profile icon button
                                     Row(
                                       children: [
                                         IconButton(
@@ -206,14 +214,12 @@ class _ServiceDetailScreenState extends State<ServiceDetailScreen> {
                                                 0.05)),
                               ),
                             ),
-                            SizedBox(
-                                height: DeviceDimensions.screenHeight(context) *
-                                    0.01),
                             //SizedBox(height: screenHeight * 0.001),
                           ],
                         )
                       ],
                     )),
+
                 //icon container
                 SizedBox(height: DeviceDimensions.screenHeight(context) * 0.03),
 
