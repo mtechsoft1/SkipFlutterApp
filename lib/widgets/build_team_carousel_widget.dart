@@ -1,3 +1,5 @@
+import 'package:Skip_The_Task/screens/user_side/home_screen.dart';
+import 'package:Skip_The_Task/screens/user_side/our_services_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:Skip_The_Task/responsive/device_dimensions.dart';
@@ -51,7 +53,7 @@ class _TeamCarouselWidgetState extends State<TeamCarouselWidget> {
             borderRadius: BorderRadius.circular(12),
           ),
           width: DeviceDimensions.screenWidth(context) * 0.5,
-          height: DeviceDimensions.screenHeight(context) * 0.5,
+          height: DeviceDimensions.screenHeight(context) * 0.55,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -89,8 +91,23 @@ class _TeamCarouselWidgetState extends State<TeamCarouselWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset('assets/images/instagram.png'),
-                  Image.asset('assets/images/divider.png'),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
+                      },
+                      child: Image.asset('assets/images/instagram.png')),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => OurServicesScreen()),
+                        );
+                      },
+                      child: Image.asset('assets/images/divider.png')),
                   Image.asset('assets/images/facebook.png'),
                   Image.asset('assets/images/divider.png'),
                   Image.asset('assets/images/x.png')

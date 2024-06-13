@@ -569,7 +569,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                         Container(
                           //color: Colors.amber,
                           width: DeviceDimensions.screenWidth(context) * 0.9,
-                          height: DeviceDimensions.screenHeight(context) * 0.5,
+                          height: DeviceDimensions.screenHeight(context) * 0.55,
                           child: Stack(
                             children: <Widget>[
                               Container(
@@ -598,7 +598,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       0.75,
                                   height:
                                       DeviceDimensions.screenHeight(context) *
-                                          0.12,
+                                          0.14,
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -657,7 +657,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       0.75,
                                   height:
                                       DeviceDimensions.screenHeight(context) *
-                                          0.12,
+                                          0.14,
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -715,7 +715,7 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                                       0.75,
                                   height:
                                       DeviceDimensions.screenHeight(context) *
-                                          0.12,
+                                          0.14,
                                   child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,

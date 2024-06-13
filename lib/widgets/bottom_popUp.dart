@@ -13,7 +13,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0),
-      height: DeviceDimensions.screenHeight(context) * 0.25,
+      height: DeviceDimensions.screenHeight(context) * 0.28,
       width: DeviceDimensions.screenWidth(context),
       decoration: BoxDecoration(
         color: Colors.white,

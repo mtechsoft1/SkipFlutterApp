@@ -230,6 +230,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: DeviceDimensions.screenHeight(context) *
                                   0.01),
                           SizedBox(
+                            height:
+                                DeviceDimensions.screenHeight(context) * 0.09,
                             child: Center(
                               child: Text('Largest Booking\nService Platform',
                                   style: TextStyle(
@@ -345,11 +347,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
               //icon container
               Container(
-                height: DeviceDimensions.screenHeight(context) * 0.12,
+                height: DeviceDimensions.screenHeight(context) * 0.16,
                 width: DeviceDimensions.screenWidth(context),
                 //color: Colors.blue,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: imageIconPaths.length,
@@ -459,7 +462,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   decoration: BoxDecoration(
                       color: Color.fromARGB(255, 92, 35, 105),
                       borderRadius: BorderRadius.circular(20)),
-                  height: DeviceDimensions.screenHeight(context) * 0.99,
+                  //height: DeviceDimensions.screenHeight(context),
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -705,6 +708,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
+                      SizedBox(
+                          height:
+                              DeviceDimensions.screenHeight(context) * 0.02),
                     ],
                   )),
 
@@ -772,7 +778,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               //popular projects
               Container(
-                height: DeviceDimensions.screenHeight(context) * 0.7,
+                height: DeviceDimensions.screenHeight(context),
                 width: DeviceDimensions.screenWidth(context) * 0.9,
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 204, 187, 209),
@@ -853,7 +859,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: DeviceDimensions.screenHeight(context) * 0.02),
               //who we work
               Container(
-                height: DeviceDimensions.screenHeight(context) * 0.5,
+                height: DeviceDimensions.screenHeight(context) * 0.6,
                 width: DeviceDimensions.screenWidth(context) * 0.85,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),

@@ -17,7 +17,7 @@ class PopularProjectsWidget extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double responsiveSize = MediaQuery.of(context).size.width;
     return SizedBox(
-      height: screenHeight * 0.3,
+      height: screenHeight * 0.4,
       child: Padding(
         padding: const EdgeInsets.all(6.0),
         child: Card(
@@ -36,7 +36,7 @@ class PopularProjectsWidget extends StatelessWidget {
               ),
               SizedBox(height: screenHeight * 0.02),
               SizedBox(
-                height: screenHeight * 0.07,
+                height: screenHeight * 0.09,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -52,7 +52,7 @@ class PopularProjectsWidget extends StatelessWidget {
               //SizedBox(height: screenHeight * 0.005),
               SizedBox(
                 width: screenWidth * 0.35,
-                height: screenHeight * 0.04,
+                height: screenHeight * 0.05,
                 child: Center(
                   child: Container(
                     decoration: BoxDecoration(

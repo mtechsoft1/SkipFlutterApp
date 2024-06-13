@@ -309,30 +309,30 @@ class _InstantRequestScreenTwoState extends State<InstantRequestScreenTwo> {
                         SizedBox(
                             height:
                                 DeviceDimensions.screenHeight(context) * 0.02),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12.0,
-                              ),
-                              child: SizedBox(
-                                height: DeviceDimensions.screenHeight(context) *
-                                    0.05,
-                                width:
-                                    DeviceDimensions.screenWidth(context) * 0.8,
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    border: OutlineInputBorder(
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(50)),
-                                    ),
-                                    labelText: 'enter pick point',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        // Row(
+                        //   children: [
+                        //     Padding(
+                        //       padding: const EdgeInsets.symmetric(
+                        //         horizontal: 12.0,
+                        //       ),
+                        //       child: SizedBox(
+                        //         height: DeviceDimensions.screenHeight(context) *
+                        //             0.05,
+                        //         width:
+                        //             DeviceDimensions.screenWidth(context) * 0.8,
+                        //         child: TextField(
+                        //           decoration: InputDecoration(
+                        //             border: OutlineInputBorder(
+                        //               borderRadius:
+                        //                   BorderRadius.all(Radius.circular(50)),
+                        //             ),
+                        //             labelText: 'enter pick point',
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
                         SizedBox(
                             height:
                                 DeviceDimensions.screenHeight(context) * 0.02),

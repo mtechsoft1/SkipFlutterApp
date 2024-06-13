@@ -181,7 +181,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                       ),
                     ])),
                 SizedBox(
-                  height: DeviceDimensions.screenHeight(context) * 0.28,
+                  height: DeviceDimensions.screenHeight(context) * 0.35,
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +198,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                         ),
                       ),
                       Container(
-                        height: DeviceDimensions.screenHeight(context) * 0.2,
+                        height: DeviceDimensions.screenHeight(context) * 0.25,
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 239, 233, 240),
                           borderRadius: BorderRadius.circular(12),
@@ -305,7 +305,7 @@ class _TaskTypeScreenState extends State<TaskTypeScreen> {
                   ),
                 ),
                 Container(
-                  //height: DeviceDimensions.screenHeight(context) * 0.09,
+                  //height: DeviceDimensions.screenHeight(context),
                   width: DeviceDimensions.screenWidth(context) * 0.9,
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 239, 233, 240),
